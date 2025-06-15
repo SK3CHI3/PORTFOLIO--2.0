@@ -1,6 +1,7 @@
+
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import VerticalFadeCards from "./VerticalFadeCards";
-import { User, Sparkle } from "lucide-react";
+import { User, Sparkle, GraduationCap, Heart, Coffee, BookOpen, Mail, Github, Linkedin, Twitter, Send } from "lucide-react";
 import React from "react";
 
 const AboutCard = () => (
