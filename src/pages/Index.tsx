@@ -6,9 +6,9 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans flex items-center justify-center">
       <div className="container mx-auto p-6 lg:p-8 max-w-6xl">
-        <div className="bg-card border border-border rounded-2xl p-8 shadow-xl">
-          <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8">
-            <div className="flex-shrink-0">
+        <div className="bg-card border border-border rounded-2xl p-8 shadow-xl min-h-[600px]">
+          <div className="flex flex-col lg:flex-row items-stretch gap-8 h-full">
+            <div className="flex-shrink-0 lg:w-80 flex items-center">
               <ProfileCard />
             </div>
             <div className="flex-1">

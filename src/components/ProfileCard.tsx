@@ -5,9 +5,9 @@ import { Briefcase, MapPin, Mail, Download, UserPlus } from "lucide-react";
 
 const ProfileCard = () => {
   return (
-    <div className="flex flex-col items-center space-y-4">
+    <div className="flex flex-col items-center justify-center space-y-4 h-full">
       <div className="text-center">
-        <Avatar className="w-32 h-32 mx-auto border-4 border-primary/20 shadow-2xl">
+        <Avatar className="w-40 h-40 mx-auto border-4 border-primary/20 shadow-2xl">
           <AvatarImage src="/lovable-uploads/17ac5018-da63-4ea1-9431-d55b517dbb9e.png" alt="Omollo Victor" />
           <AvatarFallback className="text-2xl font-bold bg-primary/10">OV</AvatarFallback>
         </Avatar>
