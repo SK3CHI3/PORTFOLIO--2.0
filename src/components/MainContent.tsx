@@ -1,5 +1,4 @@
-
-import { User, Mail, Github, Linkedin, Twitter, Telegram, GraduationCap, BookOpen, Sparkle, Heart, Coffee } from "lucide-react";
+import { User, Mail, Github, Linkedin, Twitter, GraduationCap, BookOpen, Sparkle, Heart, Coffee, Send } from "lucide-react";
 
 const MainContent = () => {
   return (
@@ -112,7 +111,7 @@ const MainContent = () => {
                     rel="noopener noreferrer" 
                     className="flex items-center gap-1 hover:text-primary transition-colors"
                   >
-                    <Telegram className="w-4 h-4" /><span>Telegram</span> – @TechTinker (6.9k+ subs)
+                    <Send className="w-4 h-4" /><span>Telegram</span> – @TechTinker (6.9k+ subs)
                   </a>
                 </div>
               </div>
@@ -125,4 +124,3 @@ const MainContent = () => {
 };
 
 export default MainContent;
-
