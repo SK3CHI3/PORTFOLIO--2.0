@@ -50,50 +50,6 @@ const AboutCard = () => (
             </span>
           ))}
         </div>
-        <div className="mt-6 text-left bg-secondary/10 border border-secondary/30 rounded-xl p-4">
-          <div className="flex items-center space-x-2 mb-3">
-            <BookOpen className="w-5 h-5 text-primary" />
-            <span className="font-semibold text-primary">Socials & Contacts</span>
-          </div>
-          <div className="flex flex-wrap gap-2 items-center text-sm">
-            <div className="flex items-center gap-2 mr-3">
-              <Mail className="w-4 h-4 text-primary" />
-              <span className="text-muted-foreground break-all">omollovictorotieno58@gmail.com</span>
-            </div>
-            <a 
-              href="https://github.com/SK3CHI3" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="flex items-center gap-1 hover:text-primary transition-colors"
-            >
-              <Github className="w-4 h-4" /><span>GitHub</span> – SK3CHI3
-            </a>
-            <a 
-              href="https://www.linkedin.com/in/omollo-victor" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="flex items-center gap-1 hover:text-primary transition-colors"
-            >
-              <Linkedin className="w-4 h-4" /><span>LinkedIn</span> – Omollo Victor
-            </a>
-            <a 
-              href="https://twitter.com/sk3chie" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="flex items-center gap-1 hover:text-primary transition-colors"
-            >
-              <Twitter className="w-4 h-4" /><span>Twitter</span> – @sk3chie
-            </a>
-            <a 
-              href="https://t.me/TechTinker" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="flex items-center gap-1 hover:text-primary transition-colors"
-            >
-              <Send className="w-4 h-4" /><span>Telegram</span> – @TechTinker (6.9k+ subs)
-            </a>
-          </div>
-        </div>
       </div>
     </div>
   </div>
