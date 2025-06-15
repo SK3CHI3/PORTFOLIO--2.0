@@ -7,7 +7,7 @@ const ProfileCard = () => {
     <div className="flex flex-col items-center justify-center space-y-4 h-full">
       <div className="text-center">
         <Avatar className="w-40 h-40 mx-auto border-4 border-primary/20 shadow-2xl">
-          <AvatarImage src="/lovable-uploads/b680829a-ac30-4b6d-8b06-6ad59dc8b775.png" alt="Omollo Victor" />
+          <AvatarImage src="https://i.pinimg.com/736x/89/64/8b/89648b93dec3a9db011650ee2ad3ba0b.jpg" alt="Omollo Victor" />
           <AvatarFallback className="text-2xl font-bold bg-primary/10">OV</AvatarFallback>
         </Avatar>
         <div className="mt-4">
