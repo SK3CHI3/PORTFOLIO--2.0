@@ -1,13 +1,10 @@
-
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { User, Mail, Github, Linkedin, Twitter, GraduationCap, BookOpen, Sparkle, Heart, Coffee, Send } from "lucide-react";
 import VerticalFadeCards from "./VerticalFadeCards";
-import { User, Sparkle, GraduationCap, Heart, Coffee, BookOpen, Mail, Github, Linkedin, Twitter, Send } from "lucide-react";
-import React from "react";
 
 const AboutCard = () => (
-  <div className="w-full h-full flex flex-col animate-fade-in">
-    <div className="absolute -inset-2 bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20 rounded-2xl blur-xl opacity-50 pointer-events-none"></div>
-    <div className="relative bg-gradient-to-br from-card via-card/95 to-card/90 rounded-2xl p-6 border border-border/50 backdrop-blur-sm shadow-2xl h-full overflow-auto">
+  <div className="relative w-full">
+    <div className="absolute -inset-2 bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20 rounded-2xl blur-xl opacity-50"></div>
+    <div className="relative bg-gradient-to-br from-card via-card/95 to-card/90 rounded-2xl p-6 border border-border/50 backdrop-blur-sm shadow-2xl h-full">
       <div className="text-center mb-6">
         <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-xl mb-3">
           <User className="w-6 h-6 text-primary" />
@@ -113,9 +110,9 @@ const AboutCard = () => (
 );
 
 const ExperienceCard = () => (
-  <div className="w-full h-full flex flex-col animate-fade-in">
-    <div className="absolute -inset-2 bg-gradient-to-r from-secondary/20 via-primary/20 to-secondary/10 rounded-2xl blur-xl opacity-40 pointer-events-none"></div>
-    <div className="relative bg-gradient-to-br from-card via-card/95 to-card/90 rounded-2xl p-6 border border-border/50 backdrop-blur-sm shadow-2xl h-full overflow-auto">
+  <div className="relative w-full">
+    <div className="absolute -inset-2 bg-gradient-to-r from-secondary/20 via-primary/20 to-secondary/10 rounded-2xl blur-xl opacity-40"></div>
+    <div className="relative bg-gradient-to-br from-card via-card/95 to-card/90 rounded-2xl p-6 border border-border/50 backdrop-blur-sm shadow-2xl h-full">
       <div className="text-center mb-6">
         <div className="inline-flex items-center justify-center w-12 h-12 bg-secondary/10 rounded-xl mb-3">
           <Sparkle className="w-6 h-6 text-secondary" />
@@ -181,24 +178,11 @@ const ExperienceCard = () => (
 const MainContent = () => {
   return (
     <div className="w-full h-full flex items-center justify-center p-4">
-      <VerticalFadeCards>
-        <Tabs defaultValue="about" className="w-full h-full">
-          <TabsList className="w-full flex mb-4 bg-background/50 rounded-lg shadow-sm justify-center gap-2">
-            <TabsTrigger value="about" className="flex items-center gap-2 px-4 py-2 data-[state=active]:bg-primary/10 rounded-md select-none transition-all">
-              <User className="w-4 h-4" /> About
-            </TabsTrigger>
-            <TabsTrigger value="exp" className="flex items-center gap-2 px-4 py-2 data-[state=active]:bg-primary/10 rounded-md select-none transition-all">
-              <Sparkle className="w-4 h-4" /> Experience
-            </TabsTrigger>
-          </TabsList>
-          <TabsContent value="about" className="w-full h-[440px]">
-            <AboutCard />
-          </TabsContent>
-          <TabsContent value="exp" className="w-full h-[440px]">
-            <ExperienceCard />
-          </TabsContent>
-        </Tabs>
-      </VerticalFadeCards>
+      <div className="w-full max-w-2xl h-full flex flex-col gap-8 items-center">
+        <VerticalFadeCards>
+          {[<AboutCard key="about" />, <ExperienceCard key="exp" />]}
+        </VerticalFadeCards>
+      </div>
     </div>
   );
 };
