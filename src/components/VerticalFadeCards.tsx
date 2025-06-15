@@ -7,7 +7,7 @@ interface VerticalFadeCardsProps {
 }
 
 // Height of a single card (in px)
-const CARD_HEIGHT = 520; 
+const CARD_HEIGHT = 520;
 
 const VerticalFadeCards: React.FC<VerticalFadeCardsProps> = ({ children, className }) => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -21,8 +21,7 @@ const VerticalFadeCards: React.FC<VerticalFadeCardsProps> = ({ children, classNa
 
     // Hide scrollbars (with CSS, and for iOS/Firefox/Chrome)
     el.style.scrollbarWidth = "none"; // Firefox
-    el.style.msOverflowStyle = "none"; // IE/Edge
-    // For Webkit browsers
+    // el.style.msOverflowStyle = "none"; // IE/Edge -- REMOVE THIS LINE, invalid in TS
     el.style.overflowY = "scroll";
 
     // Handle scroll
@@ -64,7 +63,7 @@ const VerticalFadeCards: React.FC<VerticalFadeCardsProps> = ({ children, classNa
         // Hide scrollbars visually in Chromium/Safari
         WebkitOverflowScrolling: "touch",
         scrollbarWidth: "none",
-        msOverflowStyle: "none",
+        // msOverflowStyle intentionally omitted
       }}
       // This removes scrollbars on mobile
       tabIndex={0}
@@ -125,4 +124,3 @@ const VerticalFadeCards: React.FC<VerticalFadeCardsProps> = ({ children, classNa
 };
 
 export default VerticalFadeCards;
-
