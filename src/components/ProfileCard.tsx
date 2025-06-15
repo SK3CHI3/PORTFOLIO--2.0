@@ -5,21 +5,21 @@ import { Briefcase, MapPin, Mail, Download, UserPlus } from "lucide-react";
 
 const ProfileCard = () => {
   return (
-    <div className="space-y-3">
+    <div className="flex flex-col items-center space-y-4">
       <div className="text-center">
-        <Avatar className="w-20 h-20 mx-auto border-4 border-primary/20 shadow-2xl">
+        <Avatar className="w-32 h-32 mx-auto border-4 border-primary/20 shadow-2xl">
           <AvatarImage src="/lovable-uploads/17ac5018-da63-4ea1-9431-d55b517dbb9e.png" alt="Omollo Victor" />
-          <AvatarFallback className="text-lg font-bold bg-primary/10">OV</AvatarFallback>
+          <AvatarFallback className="text-2xl font-bold bg-primary/10">OV</AvatarFallback>
         </Avatar>
-        <div className="mt-3">
-          <h1 className="text-lg font-bold text-foreground">Omollo Victor</h1>
-          <p className="text-sm text-primary font-medium mt-1">Full-Stack Engineer</p>
-          <p className="text-xs text-muted-foreground mt-1">he/him</p>
+        <div className="mt-4">
+          <h1 className="text-2xl font-bold text-foreground">Omollo Victor</h1>
+          <p className="text-base text-primary font-medium mt-1">Full-Stack Engineer</p>
+          <p className="text-sm text-muted-foreground mt-1">he/him</p>
         </div>
       </div>
 
-      <div className="space-y-2">
-        <div className="flex items-center space-x-3 p-2 rounded-lg bg-secondary/30 hover:bg-secondary/50 transition-all duration-200">
+      <div className="flex flex-wrap justify-center gap-4 max-w-md">
+        <div className="flex items-center space-x-2 p-2 rounded-lg bg-secondary/30 hover:bg-secondary/50 transition-all duration-200">
           <Briefcase className="w-4 h-4 text-primary" />
           <div>
             <span className="text-xs font-medium">Founder at </span>
@@ -27,12 +27,12 @@ const ProfileCard = () => {
           </div>
         </div>
         
-        <div className="flex items-center space-x-3 p-2 rounded-lg bg-secondary/30 hover:bg-secondary/50 transition-all duration-200">
+        <div className="flex items-center space-x-2 p-2 rounded-lg bg-secondary/30 hover:bg-secondary/50 transition-all duration-200">
           <MapPin className="w-4 h-4 text-primary" />
           <span className="text-xs">Nairobi, Kenya</span>
         </div>
         
-        <div className="flex items-center space-x-3 p-2 rounded-lg bg-secondary/30 hover:bg-secondary/50 transition-all duration-200">
+        <div className="flex items-center space-x-2 p-2 rounded-lg bg-secondary/30 hover:bg-secondary/50 transition-all duration-200">
           <Mail className="w-4 h-4 text-primary" />
           <a href="mailto:vomollo101@gmail.com" className="text-xs hover:text-primary transition-colors">
             vomollo101@gmail.com
@@ -40,13 +40,13 @@ const ProfileCard = () => {
         </div>
       </div>
 
-      <div className="space-y-2 pt-2">
-        <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-2 transition-all duration-200 shadow-lg hover:shadow-xl">
-          <UserPlus className="w-3 h-3 mr-2" />
+      <div className="flex space-x-3">
+        <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 py-2 transition-all duration-200 shadow-lg hover:shadow-xl">
+          <UserPlus className="w-4 h-4 mr-2" />
           Hire Me
         </Button>
-        <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold py-2 transition-all duration-200">
-          <Download className="w-3 h-3 mr-2" />
+        <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold px-6 py-2 transition-all duration-200">
+          <Download className="w-4 h-4 mr-2" />
           View Resume
         </Button>
       </div>
