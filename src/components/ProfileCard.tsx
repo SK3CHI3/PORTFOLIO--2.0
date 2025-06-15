@@ -13,7 +13,9 @@ const ProfileCard = () => {
         </Avatar>
         <div className="mt-4">
           <h1 className="text-2xl font-bold text-foreground">Omollo Victor</h1>
-          <p className="text-base text-primary font-medium mt-1">Full-Stack Engineer</p>
+          <p className="text-base text-primary font-medium mt-1">
+            Full-Stack Engineer | AWS Certified Cloud Practitioner
+          </p>
           <p className="text-sm text-muted-foreground mt-1">he/him</p>
         </div>
       </div>
@@ -55,3 +57,4 @@ const ProfileCard = () => {
 };
 
 export default ProfileCard;
+
