@@ -64,32 +64,15 @@ const ProjectsCard = () => {
           <h2 className="text-lg font-semibold text-foreground mb-1">Projects</h2>
           <div className="w-10 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full mx-auto" />
         </div>
-        {/* Scrollable grid for all projects, shows 4 (2x2) at a time, scroll for more, scrollbar hidden */}
+        {/* Grid for all projects; no scroll, all visible */}
         <div
-          className="grid grid-cols-1 sm:grid-cols-2 gap-5 overflow-y-auto scrollbar-hide"
-          style={{
-            maxHeight: `calc(${CARD_HEIGHT * 2 + 20}px)`,
-            minHeight: `${CARD_HEIGHT * 2 + 20}px`,
-            paddingRight: "0.5rem",
-          }}
+          className="grid grid-cols-1 sm:grid-cols-2 gap-5"
         >
           {projects.map((proj) => (
             <ProjectCard key={proj.name} {...proj} />
           ))}
         </div>
       </div>
-      {/* Hide vertical scrollbar cross-browser */}
-      <style>
-        {`
-          .scrollbar-hide {
-            scrollbar-width: none; /* Firefox */
-            -ms-overflow-style: none; /* IE 10+ */
-          }
-          .scrollbar-hide::-webkit-scrollbar {
-            display: none; /* Safari and Chrome */
-          }
-        `}
-      </style>
     </div>
   );
 };
