@@ -1,5 +1,5 @@
 
-import { User, MapPin, Briefcase, Code, Award, Zap, Globe, Coffee, Heart, Rocket } from "lucide-react";
+import { User, Mail, Github, Linkedin, Twitter, Telegram, GraduationCap, BookOpen, Sparkle, Heart, Coffee } from "lucide-react";
 
 const MainContent = () => {
   return (
@@ -7,7 +7,7 @@ const MainContent = () => {
       <div className="w-full max-w-2xl h-full flex items-center">
         <div className="relative w-full">
           <div className="absolute -inset-2 bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20 rounded-2xl blur-xl opacity-50"></div>
-          <div className="relative bg-gradient-to-br from-card via-card/95 to-card/90 rounded-2xl p-6 border border-border/50 backdrop-blur-sm shadow-2xl h-full">
+          <div className="relative bg-gradient-to-br from-card via-card/95 to-card/90 rounded-2xl p-6 border border-border/50 backdrop-blur-sm shadow-2xl h-full overflow-y-auto">
             <div className="text-center mb-6">
               <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-xl mb-3">
                 <User className="w-6 h-6 text-primary" />
@@ -16,7 +16,7 @@ const MainContent = () => {
               <div className="w-16 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full mx-auto"></div>
             </div>
 
-            <div className="space-y-4 text-center">
+            <div className="space-y-6 text-center">
               <p className="text-base leading-relaxed text-muted-foreground">
                 Hi there! I'm <span className="text-primary font-bold">Omollo Victor</span>, a passionate 
                 <span className="text-primary font-semibold"> Full-Stack Engineer</span> who loves crafting 
@@ -25,28 +25,20 @@ const MainContent = () => {
                 and proud founder of <span className="text-primary font-bold">Brandy</span>.
               </p>
 
-              <div className="grid grid-cols-2 gap-3 my-4">
-                <div className="flex items-center space-x-2 p-3 rounded-lg bg-primary/5 border border-primary/20 hover:bg-primary/10 transition-all duration-300">
-                  <div className="flex-shrink-0 w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center">
-                    <Code className="w-4 h-4 text-primary" />
-                  </div>
-                  <div className="text-left">
-                    <h4 className="font-semibold text-foreground text-sm">Full-Stack</h4>
-                    <p className="text-xs text-muted-foreground">React, Next.js</p>
-                  </div>
+              {/* Education & Training */}
+              <div className="bg-primary/10 border border-primary/20 rounded-xl p-4 text-left space-y-3">
+                <div className="flex items-center mb-2 space-x-2">
+                  <GraduationCap className="w-5 h-5 text-primary" />
+                  <span className="font-semibold text-primary">Education & Training</span>
                 </div>
-
-                <div className="flex items-center space-x-2 p-3 rounded-lg bg-secondary/5 border border-secondary/20 hover:bg-secondary/10 transition-all duration-300">
-                  <div className="flex-shrink-0 w-8 h-8 bg-secondary/20 rounded-lg flex items-center justify-center">
-                    <Globe className="w-4 h-4 text-primary" />
-                  </div>
-                  <div className="text-left">
-                    <h4 className="font-semibold text-foreground text-sm">Cloud Solutions</h4>
-                    <p className="text-xs text-muted-foreground">AWS</p>
-                  </div>
-                </div>
+                <ul className="ml-2 list-disc text-sm space-y-1 text-muted-foreground">
+                  <li><strong>Software Engineering</strong> – PLP Africa</li>
+                  <li><strong>AWS Certified Cloud Practitioner</strong> – Completed</li>
+                  <li><strong>Currently learning:</strong> Cybersecurity (Hack The Box), APIs, Web Requests</li>
+                </ul>
               </div>
 
+              {/* What Drives Me / Profile */}
               <div className="bg-gradient-to-r from-primary/10 via-secondary/10 to-primary/10 rounded-xl p-4 border border-primary/20">
                 <div className="flex items-center justify-center space-x-2 mb-3">
                   <Heart className="w-4 h-4 text-primary" />
@@ -60,6 +52,7 @@ const MainContent = () => {
                 </p>
               </div>
 
+              {/* Skills badges */}
               <div className="flex flex-wrap justify-center gap-2">
                 {[
                   "React & Next.js",
@@ -77,6 +70,52 @@ const MainContent = () => {
                   </span>
                 ))}
               </div>
+
+              {/* Socials & Contacts */}
+              <div className="mt-6 text-left bg-secondary/10 border border-secondary/30 rounded-xl p-4">
+                <div className="flex items-center space-x-2 mb-3">
+                  <BookOpen className="w-5 h-5 text-primary" />
+                  <span className="font-semibold text-primary">Socials & Contacts</span>
+                </div>
+                <div className="flex flex-wrap gap-2 items-center text-sm">
+                  <div className="flex items-center gap-2 mr-3">
+                    <Mail className="w-4 h-4 text-primary" />
+                    <span className="text-muted-foreground break-all">omollovictorotieno58@gmail.com</span>
+                  </div>
+                  <a 
+                    href="https://github.com/SK3CHI3" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="flex items-center gap-1 hover:text-primary transition-colors"
+                  >
+                    <Github className="w-4 h-4" /><span>GitHub</span> – SK3CHI3
+                  </a>
+                  <a 
+                    href="https://www.linkedin.com/in/omollo-victor" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="flex items-center gap-1 hover:text-primary transition-colors"
+                  >
+                    <Linkedin className="w-4 h-4" /><span>LinkedIn</span> – Omollo Victor
+                  </a>
+                  <a 
+                    href="https://twitter.com/sk3chie" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="flex items-center gap-1 hover:text-primary transition-colors"
+                  >
+                    <Twitter className="w-4 h-4" /><span>Twitter</span> – @sk3chie
+                  </a>
+                  <a 
+                    href="https://t.me/TechTinker" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="flex items-center gap-1 hover:text-primary transition-colors"
+                  >
+                    <Telegram className="w-4 h-4" /><span>Telegram</span> – @TechTinker (6.9k+ subs)
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -86,3 +125,4 @@ const MainContent = () => {
 };
 
 export default MainContent;
+
