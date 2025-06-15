@@ -16,10 +16,10 @@ const AboutCard = () => (
       <div className="space-y-6 text-center">
         <p className="text-base leading-relaxed text-muted-foreground">
           Hi there! I'm <span className="text-primary font-bold">Omollo Victor</span>, a passionate 
-          <span className="text-primary font-semibold"> Full-Stack Engineer</span> who loves crafting 
+          <span className="text-primary font-semibold"> Full Stack Software Engineer</span> and 
+          <span className="text-primary font-semibold"> AWS Certified Cloud Practitioner</span> who loves crafting 
           <span className="text-primary font-semibold"> innovative digital solutions</span>. 
-          Currently serving as an <span className="font-semibold text-foreground">AWS Cloud Practitioner</span> 
-          and proud founder of <span className="text-primary font-bold">Brandy</span>.
+          Currently serving as founder of <span className="text-primary font-bold">Brandy</span>.
         </p>
         <div className="bg-gradient-to-r from-primary/10 via-secondary/10 to-primary/10 rounded-xl p-4 border border-primary/20">
           <div className="flex items-center justify-center space-x-2 mb-3">
