@@ -60,7 +60,7 @@ const AboutCard = () => (
 const ExperienceCard = () => (
   <div className="relative w-full">
     <div className="absolute -inset-2 bg-gradient-to-r from-secondary/20 via-primary/20 to-secondary/10 rounded-2xl blur-xl opacity-40"></div>
-    <div className="relative bg-gradient-to-br from-card via-card/95 to-card/90 rounded-2xl p-6 border border-border/50 backdrop-blur-sm shadow-2xl h-full">
+    <div className="relative bg-gradient-to-br from-card via-card/95 to-card/90 rounded-2xl p-6 border border-border/50 backdrop-blur-sm shadow-2xl h-full flex flex-col">
       <div className="text-center mb-6">
         <div className="inline-flex items-center justify-center w-12 h-12 bg-secondary/10 rounded-xl mb-3">
           <Sparkle className="w-6 h-6 text-secondary" />
@@ -68,57 +68,59 @@ const ExperienceCard = () => (
         <h2 className="text-2xl font-bold text-foreground mb-2">Where I’ve Worked</h2>
         <div className="w-16 h-0.5 bg-gradient-to-r from-secondary to-primary rounded-full mx-auto"></div>
       </div>
-      <div className="space-y-6 text-left">
-        {/* Tann Man Gandhi Foundation */}
-        <div>
-          <div className="flex items-center gap-2">
-            <span className="font-semibold text-primary">🛡️ Volunteer Frontend Developer</span>
-            <span className="text-xs text-muted-foreground">Tann Man Gandhi Foundation</span>
-            <span className="text-xs text-muted-foreground">Mar 2025 – Present</span>
+      <ScrollArea className="w-full flex-1 max-h-[340px] pr-2">
+        <div className="space-y-6 text-left">
+          {/* Tann Man Gandhi Foundation */}
+          <div>
+            <div className="flex items-center gap-2">
+              <span className="font-semibold text-primary">🛡️ Volunteer Frontend Developer</span>
+              <span className="text-xs text-muted-foreground">Tann Man Gandhi Foundation</span>
+              <span className="text-xs text-muted-foreground">Mar 2025 – Present</span>
+            </div>
+            <ul className="list-disc ml-6 mt-1 text-sm text-muted-foreground space-y-1">
+              <li>Built responsive frontend components for peace education and youth empowerment campaigns</li>
+              <li>Collaborated remotely with a global dev team</li>
+              <li>Focused on accessibility, clean UI, and performance</li>
+            </ul>
           </div>
-          <ul className="list-disc ml-6 mt-1 text-sm text-muted-foreground space-y-1">
-            <li>Built responsive frontend components for peace education and youth empowerment campaigns</li>
-            <li>Collaborated remotely with a global dev team</li>
-            <li>Focused on accessibility, clean UI, and performance</li>
-          </ul>
-        </div>
-        {/* MMU E-learning Rebuild */}
-        <div>
-          <div className="flex items-center gap-2">
-            <span className="font-semibold text-primary">🧑🏽‍🏫 Lead Developer – MMU E-learning Rebuild</span>
-            <span className="text-xs text-muted-foreground">Feb 2025 – Jun 2025</span>
+          {/* MMU E-learning Rebuild */}
+          <div>
+            <div className="flex items-center gap-2">
+              <span className="font-semibold text-primary">🧑🏽‍🏫 Lead Developer – MMU E-learning Rebuild</span>
+              <span className="text-xs text-muted-foreground">Feb 2025 – Jun 2025</span>
+            </div>
+            <ul className="list-disc ml-6 mt-1 text-sm text-muted-foreground space-y-1">
+              <li>Fully redesigned MMU’s broken e-learning portal using Supabase + React</li>
+              <li>Integrated faculty-based login, lecturer/student roles, and secure auth</li>
+              <li>Hosted on Netlify, optimized for performance & low maintenance</li>
+            </ul>
           </div>
-          <ul className="list-disc ml-6 mt-1 text-sm text-muted-foreground space-y-1">
-            <li>Fully redesigned MMU’s broken e-learning portal using Supabase + React</li>
-            <li>Integrated faculty-based login, lecturer/student roles, and secure auth</li>
-            <li>Hosted on Netlify, optimized for performance & low maintenance</li>
-          </ul>
-        </div>
-        {/* Brandy */}
-        <div>
-          <div className="flex items-center gap-2">
-            <span className="font-semibold text-primary">🎨 Founder & Developer – Brandy</span>
-            <span className="text-xs text-muted-foreground">Jan 2025 – Present</span>
+          {/* Brandy */}
+          <div>
+            <div className="flex items-center gap-2">
+              <span className="font-semibold text-primary">🎨 Founder & Developer – Brandy</span>
+              <span className="text-xs text-muted-foreground">Jan 2025 – Present</span>
+            </div>
+            <ul className="list-disc ml-6 mt-1 text-sm text-muted-foreground space-y-1">
+              <li>Launched a working e-commerce MVP for artists to sell custom merch</li>
+              <li>Enabled AI-powered quote requests + 3-day fulfillment model</li>
+              <li>Handles user onboarding, orders, and refund policy logic via Supabase</li>
+            </ul>
           </div>
-          <ul className="list-disc ml-6 mt-1 text-sm text-muted-foreground space-y-1">
-            <li>Launched a working e-commerce MVP for artists to sell custom merch</li>
-            <li>Enabled AI-powered quote requests + 3-day fulfillment model</li>
-            <li>Handles user onboarding, orders, and refund policy logic via Supabase</li>
-          </ul>
-        </div>
-        {/* Universal Resource Hub */}
-        <div>
-          <div className="flex items-center gap-2">
-            <span className="font-semibold text-primary">🌐 Universal Resource Hub – Dev & Architect</span>
-            <span className="text-xs text-muted-foreground">2024 – Present</span>
+          {/* Universal Resource Hub */}
+          <div>
+            <div className="flex items-center gap-2">
+              <span className="font-semibold text-primary">🌐 Universal Resource Hub – Dev & Architect</span>
+              <span className="text-xs text-muted-foreground">2024 – Present</span>
+            </div>
+            <ul className="list-disc ml-6 mt-1 text-sm text-muted-foreground space-y-1">
+              <li>Built a central platform aggregating dev resources</li>
+              <li>Uses APIs to auto-fetch & list latest free courses, docs, tools</li>
+              <li>Backend + frontend fully handled, deployed on Netlify</li>
+            </ul>
           </div>
-          <ul className="list-disc ml-6 mt-1 text-sm text-muted-foreground space-y-1">
-            <li>Built a central platform aggregating dev resources</li>
-            <li>Uses APIs to auto-fetch & list latest free courses, docs, tools</li>
-            <li>Backend + frontend fully handled, deployed on Netlify</li>
-          </ul>
         </div>
-      </div>
+      </ScrollArea>
     </div>
   </div>
 );
