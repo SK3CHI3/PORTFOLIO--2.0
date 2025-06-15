@@ -46,9 +46,28 @@ const projects = [
     language: "TypeScript",
     url: "https://github.com/SK3CHI3/Hex-",
   },
+  // --- New project 1 ---
+  {
+    name: "MOTHERY-CARE-CHILDRENS-HOME",
+    description:
+      "Website for Motherly Care Children’s Home & School – Ruai, Kenya. A modern, responsive site built to showcase the mission, programs, and impact of Motherly Care. Designed for transparency, donor engagement, and outreach.",
+    language: "JavaScript",
+    url: "", // URL not provided, leave blank or ask the user
+    liveUrl: "", // Live URL not provided
+  },
+  // --- New project 2 ---
+  {
+    name: "Nox Public",
+    description:
+      "NOX – A secure, anonymous real-time chat app where messages vanish into the night. No traces. No history. Just pure, encrypted conversations.",
+    language: "TypeScript",
+    url: "", // URL not provided
+    liveUrl: "", // Live URL not provided
+  },
 ];
 
-const CARD_HEIGHT = 120; // unchanged
+// Height for two cards, closely spaced.
+const CARD_HEIGHT = 120;
 
 const ProjectsCard = () => {
   return (
@@ -64,15 +83,32 @@ const ProjectsCard = () => {
           <h2 className="text-lg font-semibold text-foreground mb-1">Projects</h2>
           <div className="w-10 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full mx-auto" />
         </div>
-        {/* Grid for all projects; no scroll, all visible */}
+        {/* Scrollable grid for all projects, shows 4 (2x2) at a time, scroll for more, scrollbar hidden */}
         <div
-          className="grid grid-cols-1 sm:grid-cols-2 gap-5"
+          className="grid grid-cols-1 sm:grid-cols-2 gap-5 overflow-y-auto scrollbar-hide"
+          style={{
+            maxHeight: `calc(${CARD_HEIGHT * 2 + 20}px)`,
+            minHeight: `${CARD_HEIGHT * 2 + 20}px`,
+            paddingRight: "0.5rem",
+          }}
         >
           {projects.map((proj) => (
             <ProjectCard key={proj.name} {...proj} />
           ))}
         </div>
       </div>
+      {/* Hide vertical scrollbar cross-browser */}
+      <style>
+        {`
+          .scrollbar-hide {
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* IE 10+ */
+          }
+          .scrollbar-hide::-webkit-scrollbar {
+            display: none; /* Safari and Chrome */
+          }
+        `}
+      </style>
     </div>
   );
 };
