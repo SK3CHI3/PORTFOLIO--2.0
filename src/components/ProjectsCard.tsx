@@ -69,11 +69,11 @@ const ProjectsCard = () => {
           <h2 className="text-2xl font-bold text-foreground mb-2">Projects</h2>
           <div className="w-16 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full mx-auto"></div>
         </div>
-        {/* Scrollable grid for all projects, shows 4 (2x2) at a time, scroll for more */}
+        {/* Scrollable grid for all projects, shows 4 (2x2) at a time, scroll for more, scrollbar hidden */}
         <div
-          className="grid grid-cols-1 sm:grid-cols-2 gap-5 overflow-y-auto"
+          className="grid grid-cols-1 sm:grid-cols-2 gap-5 overflow-y-auto scrollbar-hide"
           style={{
-            maxHeight: `calc(${CARD_HEIGHT * 2 + 20}px)`, // 2 rows, 2 gaps (2*120+20)
+            maxHeight: `calc(${CARD_HEIGHT * 2 + 20}px)`,
             minHeight: `${CARD_HEIGHT * 2 + 20}px`,
             paddingRight: "0.5rem",
           }}
@@ -83,8 +83,21 @@ const ProjectsCard = () => {
           ))}
         </div>
       </div>
+      {/* Hide vertical scrollbar cross-browser */}
+      <style>
+        {`
+          .scrollbar-hide {
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* IE 10+ */
+          }
+          .scrollbar-hide::-webkit-scrollbar {
+            display: none; /* Safari and Chrome */
+          }
+        `}
+      </style>
     </div>
   );
 };
 
 export default ProjectsCard;
+
