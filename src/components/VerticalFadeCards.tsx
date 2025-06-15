@@ -1,4 +1,3 @@
-
 import React, { useRef, useLayoutEffect, useState, useEffect } from "react";
 
 interface VerticalFadeCardsProps {
@@ -27,7 +26,9 @@ const VerticalFadeCards: React.FC<VerticalFadeCardsProps> = ({
       .fadecards-no-scrollbar { scrollbar-width: none !important; -ms-overflow-style: none !important;}
     `;
     document.head.appendChild(style);
-    return () => document.head.removeChild(style);
+    return () => {
+      document.head.removeChild(style);
+    };
   }, []);
 
   // Snap to correct card after scroll
@@ -136,4 +137,3 @@ const VerticalFadeCards: React.FC<VerticalFadeCardsProps> = ({
 };
 
 export default VerticalFadeCards;
-
