@@ -1,16 +1,6 @@
-import { useState } from "react";
-import ProjectCard from "./ProjectCard";
-import {
-  Pagination,
-  PaginationContent,
-  PaginationItem,
-  PaginationLink,
-  PaginationNext,
-  PaginationPrevious,
-} from "./ui/pagination";
 
-// Add liveUrl to relevant projects if live demo exists.
-// (Example liveUrl — replace with your real URLs if available)
+import ProjectCard from "./ProjectCard";
+
 const projects = [
   {
     name: "MY-PORTFOLIO-1.0",
@@ -59,21 +49,12 @@ const projects = [
   },
 ];
 
-const PROJECTS_PER_PAGE = 4;
-const totalPages = Math.ceil(projects.length / PROJECTS_PER_PAGE);
+const CARD_HEIGHT = 120; // Make each card compact (adjust if needed)
 
 const ProjectsCard = () => {
-  const [page, setPage] = useState(1);
-
-  const pagedProjects = projects.slice(
-    (page - 1) * PROJECTS_PER_PAGE,
-    page * PROJECTS_PER_PAGE
-  );
-
-  const goToPage = (n: number) => {
-    if (n < 1 || n > totalPages) return;
-    setPage(n);
-  };
+  // With 2 columns on desktop, 4 cards = 2 rows: height = 2 * CARD_HEIGHT + gaps.
+  // We'll set a maxHeight and make the grid scrollable if more than 4 cards.
+  // Adjusted for padding/gaps: 2 gaps per row (gap-5 = 20px each). So: 2*120 + 20 = 260px.
 
   return (
     <div className="relative w-full h-full">
@@ -88,44 +69,18 @@ const ProjectsCard = () => {
           <h2 className="text-2xl font-bold text-foreground mb-2">Projects</h2>
           <div className="w-16 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full mx-auto"></div>
         </div>
-        {/* 2x2 grid when desktop, stacked on mobile */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 min-h-[140px]">
-          {pagedProjects.map((proj) => (
+        {/* Scrollable grid for all projects, shows 4 (2x2) at a time, scroll for more */}
+        <div
+          className="grid grid-cols-1 sm:grid-cols-2 gap-5 overflow-y-auto"
+          style={{
+            maxHeight: `calc(${CARD_HEIGHT * 2 + 20}px)`, // 2 rows, 2 gaps (2*120+20)
+            minHeight: `${CARD_HEIGHT * 2 + 20}px`,
+            paddingRight: "0.5rem",
+          }}
+        >
+          {projects.map((proj) => (
             <ProjectCard key={proj.name} {...proj} />
           ))}
-        </div>
-        {/* Pagination Controls */}
-        <div className="mt-6 flex justify-center">
-          <Pagination>
-            <PaginationContent>
-              <PaginationItem>
-                <PaginationPrevious
-                  onClick={() => goToPage(page - 1)}
-                  tabIndex={page === 1 ? -1 : 0}
-                  aria-disabled={page === 1}
-                  style={{ opacity: page === 1 ? 0.5 : 1 }}
-                />
-              </PaginationItem>
-              {[...Array(totalPages)].map((_, idx) => (
-                <PaginationItem key={idx}>
-                  <PaginationLink
-                    isActive={page === idx + 1}
-                    onClick={() => goToPage(idx + 1)}
-                  >
-                    {idx + 1}
-                  </PaginationLink>
-                </PaginationItem>
-              ))}
-              <PaginationItem>
-                <PaginationNext
-                  onClick={() => goToPage(page + 1)}
-                  tabIndex={page === totalPages ? -1 : 0}
-                  aria-disabled={page === totalPages}
-                  style={{ opacity: page === totalPages ? 0.5 : 1 }}
-                />
-              </PaginationItem>
-            </PaginationContent>
-          </Pagination>
         </div>
       </div>
     </div>
