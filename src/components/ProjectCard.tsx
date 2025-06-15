@@ -1,5 +1,5 @@
 
-import { ExternalLink, Source } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 
 interface ProjectCardProps {
   name: string;
@@ -23,7 +23,7 @@ export default function ProjectCard({
   liveUrl,
 }: ProjectCardProps) {
   return (
-    <div className="relative bg-card border border-border rounded-xl shadow hover:shadow-lg transition-shadow group p-4 flex flex-col h-full min-h-44">
+    <div className="relative bg-card border border-border rounded-xl shadow hover:shadow-lg transition-shadow group p-3 flex flex-col h-full min-h-32">
       <div className="flex items-center mb-2">
         <span className={`inline-block w-2 h-2 rounded-full mr-2 ${langColors[language] || "bg-muted"}`}></span>
         <span className="font-semibold text-foreground text-base">{name}</span>
@@ -48,7 +48,7 @@ export default function ProjectCard({
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1 text-secondary hover:underline text-xs"
           >
-            <Source className="w-4 h-4" />
+            <Github className="w-4 h-4" />
             Source
           </a>
         )}

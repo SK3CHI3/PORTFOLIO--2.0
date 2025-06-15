@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import ProjectCard from "./ProjectCard";
 import {
@@ -90,7 +89,7 @@ const ProjectsCard = () => {
           <div className="w-16 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full mx-auto"></div>
         </div>
         {/* 2x2 grid when desktop, stacked on mobile */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 min-h-[220px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 min-h-[140px]">
           {pagedProjects.map((proj) => (
             <ProjectCard key={proj.name} {...proj} />
           ))}
@@ -101,7 +100,6 @@ const ProjectsCard = () => {
             <PaginationContent>
               <PaginationItem>
                 <PaginationPrevious
-                  asChild
                   onClick={() => goToPage(page - 1)}
                   tabIndex={page === 1 ? -1 : 0}
                   aria-disabled={page === 1}
@@ -120,7 +118,6 @@ const ProjectsCard = () => {
               ))}
               <PaginationItem>
                 <PaginationNext
-                  asChild
                   onClick={() => goToPage(page + 1)}
                   tabIndex={page === totalPages ? -1 : 0}
                   aria-disabled={page === totalPages}
