@@ -9,6 +9,6 @@ Explore my **projects**, check out my **skills**, and get to know the story behi
 
 ---
 
-**Let’s build something awesome together!**
+**Let’s build something awesome together!** 
    
 ---
