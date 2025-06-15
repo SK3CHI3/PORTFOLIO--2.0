@@ -1,4 +1,4 @@
-import { User, Mail, Github, Linkedin, Twitter, GraduationCap, BookOpen, Sparkle, Heart, Coffee, Send } from "lucide-react";
+import { User, Mail, Github, Linkedin, Twitter, Sparkle, Heart, Coffee, BookOpen, Send } from "lucide-react";
 import VerticalFadeCards from "./VerticalFadeCards";
 import ProjectsCard from "./ProjectsCard";
 
@@ -21,17 +21,6 @@ const AboutCard = () => (
           Currently serving as an <span className="font-semibold text-foreground">AWS Cloud Practitioner</span> 
           and proud founder of <span className="text-primary font-bold">Brandy</span>.
         </p>
-        <div className="bg-primary/10 border border-primary/20 rounded-xl p-4 text-left space-y-3">
-          <div className="flex items-center mb-2 space-x-2">
-            <GraduationCap className="w-5 h-5 text-primary" />
-            <span className="font-semibold text-primary">Education & Training</span>
-          </div>
-          <ul className="ml-2 list-disc text-sm space-y-1 text-muted-foreground">
-            <li><strong>Software Engineering</strong> – PLP Africa</li>
-            <li><strong>AWS Certified Cloud Practitioner</strong> – Completed</li>
-            <li><strong>Currently learning:</strong> Cybersecurity (Hack The Box), APIs, Web Requests</li>
-          </ul>
-        </div>
         <div className="bg-gradient-to-r from-primary/10 via-secondary/10 to-primary/10 rounded-xl p-4 border border-primary/20">
           <div className="flex items-center justify-center space-x-2 mb-3">
             <Heart className="w-4 h-4 text-primary" />
