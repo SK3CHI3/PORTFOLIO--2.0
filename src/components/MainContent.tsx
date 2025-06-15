@@ -109,7 +109,7 @@ const AboutCard = () => (
   </div>
 );
 
-const ExperienceCard = () => (
+const ExperienceCardPart1 = () => (
   <div className="relative w-full">
     <div className="absolute -inset-2 bg-gradient-to-r from-secondary/20 via-primary/20 to-secondary/10 rounded-2xl blur-xl opacity-40"></div>
     <div className="relative bg-gradient-to-br from-card via-card/95 to-card/90 rounded-2xl p-6 border border-border/50 backdrop-blur-sm shadow-2xl h-full">
@@ -146,6 +146,23 @@ const ExperienceCard = () => (
             <li>Hosted on Netlify, optimized for performance & low maintenance</li>
           </ul>
         </div>
+      </div>
+    </div>
+  </div>
+);
+
+const ExperienceCardPart2 = () => (
+  <div className="relative w-full">
+    <div className="absolute -inset-2 bg-gradient-to-r from-secondary/20 via-primary/20 to-secondary/10 rounded-2xl blur-xl opacity-40"></div>
+    <div className="relative bg-gradient-to-br from-card via-card/95 to-card/90 rounded-2xl p-6 border border-border/50 backdrop-blur-sm shadow-2xl h-full">
+      <div className="text-center mb-6">
+        <div className="inline-flex items-center justify-center w-12 h-12 bg-secondary/10 rounded-xl mb-3">
+          <Sparkle className="w-6 h-6 text-secondary" />
+        </div>
+        <h2 className="text-2xl font-bold text-foreground mb-2">Where I’ve Worked (cont’d)</h2>
+        <div className="w-16 h-0.5 bg-gradient-to-r from-secondary to-primary rounded-full mx-auto"></div>
+      </div>
+      <div className="space-y-6 text-left">
         {/* Brandy */}
         <div>
           <div className="flex items-center gap-2">
@@ -180,7 +197,7 @@ const MainContent = () => {
     <div className="w-full h-full flex items-center justify-center p-4">
       <div className="w-full max-w-2xl h-full flex flex-col gap-8 items-center">
         <VerticalFadeCards>
-          {[<AboutCard key="about" />, <ExperienceCard key="exp" />]}
+          {[<AboutCard key="about" />, <ExperienceCardPart1 key="exp1" />, <ExperienceCardPart2 key="exp2" />]}
         </VerticalFadeCards>
       </div>
     </div>
