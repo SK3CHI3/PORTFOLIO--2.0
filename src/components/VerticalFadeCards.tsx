@@ -93,20 +93,21 @@ const VerticalFadeCards: React.FC<VerticalFadeCardsProps> = ({
         const isCurrent = idx === activeIndex && !isFading;
         const isPrev = idx === lastIndex && isFading;
 
+        // Use custom animate-fade-pure-in/out (opacity only)
         return (
           <div
             className={`
               w-full snap-start transition-opacity duration-300
               ${isCurrent
-                ? "opacity-100 pointer-events-auto relative z-10 animate-fade-in"
+                ? "opacity-100 pointer-events-auto relative z-10 animate-fade-pure-in"
                 : isPrev
-                  ? "opacity-0 pointer-events-none relative z-0 animate-fade-out"
+                  ? "opacity-0 pointer-events-none relative z-0 animate-fade-pure-out"
                   : "opacity-0 pointer-events-none"}
             `}
             style={{
               height: CARD_HEIGHT,
               minHeight: CARD_HEIGHT,
-              willChange: "opacity, transform",
+              willChange: "opacity",
               touchAction: "manipulation",
             }}
             key={idx}
@@ -132,6 +133,23 @@ const VerticalFadeCards: React.FC<VerticalFadeCardsProps> = ({
             aria-hidden="true"
           />
         ))}
+      {/* Add fade keyframes for pure fade-in/fade-out animation */}
+      <style>{`
+        @keyframes fade-pure-in {
+          from { opacity: 0;}
+          to { opacity: 1;}
+        }
+        @keyframes fade-pure-out {
+          from { opacity: 1;}
+          to { opacity: 0;}
+        }
+        .animate-fade-pure-in {
+          animation: fade-pure-in 0.3s ease-out;
+        }
+        .animate-fade-pure-out {
+          animation: fade-pure-out 0.3s ease-out;
+        }
+      `}</style>
     </div>
   );
 };
