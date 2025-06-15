@@ -4,17 +4,17 @@ import { Briefcase, MapPin, Mail, Link as LinkIcon, Users } from "lucide-react";
 
 const ProfileCard = () => {
   return (
-    <div className="space-y-6">
-      <Avatar className="w-60 h-60 md:w-72 md:h-72 mx-auto lg:mx-0 border-2 border-border">
+    <div className="space-y-4">
+      <Avatar className="w-32 h-32 mx-auto lg:mx-0 border-2 border-border">
         <AvatarImage src="/lovable-uploads/17ac5018-da63-4ea1-9431-d55b517dbb9e.png" alt="SKECHIE" />
         <AvatarFallback>S</AvatarFallback>
       </Avatar>
       <div>
-        <h1 className="text-2xl font-bold">SKECHIE</h1>
-        <p className="text-xl text-muted-foreground">SK3CH13 · he/him</p>
+        <h1 className="text-xl font-bold">SKECHIE</h1>
+        <p className="text-lg text-muted-foreground">SK3CH13 · he/him</p>
       </div>
 
-      <div className="flex items-center space-x-4 text-muted-foreground">
+      <div className="flex items-center space-x-4 text-sm text-muted-foreground">
         <div className="flex items-center space-x-1 hover:text-primary cursor-pointer">
           <Users className="w-4 h-4" />
           <span><span className="font-bold text-foreground">14</span> followers</span>
@@ -25,7 +25,7 @@ const ProfileCard = () => {
         </div>
       </div>
 
-      <div className="space-y-2 text-foreground">
+      <div className="space-y-2 text-sm text-foreground">
         <div className="flex items-center space-x-2">
           <Briefcase className="w-4 h-4 text-muted-foreground" />
           <span>Founder at <a href="#" className="font-bold text-primary hover:underline">Brandy</a></span>
@@ -47,9 +47,9 @@ const ProfileCard = () => {
       </div>
 
       <div>
-        <h2 className="text-lg font-semibold mb-2">Achievements</h2>
+        <h2 className="text-base font-semibold mb-2">Achievements</h2>
         <div className="flex space-x-2">
-           <img src="https://github.githubassets.com/images/modules/profile/achievements/arctic-code-vault-contributor-default.png" alt="Achievement" className="w-16 h-16"/>
+           <img src="https://github.githubassets.com/images/modules/profile/achievements/arctic-code-vault-contributor-default.png" alt="Achievement" className="w-12 h-12"/>
         </div>
       </div>
     </div>

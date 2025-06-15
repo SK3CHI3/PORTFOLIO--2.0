@@ -7,31 +7,31 @@ import { TikTokIcon } from './TikTokIcon';
 
 const projects = [
   {
-    icon: <Globe className="w-5 h-5 text-muted-foreground" />,
+    icon: <Globe className="w-4 h-4 text-muted-foreground" />,
     name: "Universal Resource Hub",
     description: "Free learning resources",
     link: "#",
   },
   {
-    icon: <GraduationCap className="w-5 h-5 text-muted-foreground" />,
+    icon: <GraduationCap className="w-4 h-4 text-muted-foreground" />,
     name: "MMU LMS Rebuild",
     description: "Modern e-learning platform for my University.",
     link: "#",
   },
   {
-    icon: <Building className="w-5 h-5 text-muted-foreground" />,
+    icon: <Building className="w-4 h-4 text-muted-foreground" />,
     name: "Government Projects Tracker",
     description: "Transparency for national projects",
     link: "#",
   },
   {
-    icon: <Wand2 className="w-5 h-5 text-muted-foreground" />,
+    icon: <Wand2 className="w-4 h-4 text-muted-foreground" />,
     name: "BrandyShop",
     description: "Artist-led e-commerce",
     link: "#",
   },
   {
-    icon: <Briefcase className="w-5 h-5 text-muted-foreground" />,
+    icon: <Briefcase className="w-4 h-4 text-muted-foreground" />,
     name: "TechTinker",
     description: "Tech tutorials hub",
     link: "#",
@@ -53,28 +53,27 @@ const socials = [
     { name: 'Telegram', icon: <Send className="w-4 h-4"/>, url: '#', color: 'bg-sky-500' },
 ];
 
-
 const MainContent = () => {
   return (
-    <div className="space-y-8">
+    <div className="space-y-6">
       <div>
-        <h2 className="text-3xl font-bold mb-2">👋 Hey, I'm SK3CHIE</h2>
-        <p className="text-lg text-muted-foreground">
+        <h2 className="text-2xl font-bold mb-2">👋 Hey, I'm SK3CHIE</h2>
+        <p className="text-base text-muted-foreground">
           Full-Stack Engineer | AWS Cloud Practitioner | Founder - <a href="#" className="text-primary hover:underline">Brandy</a>
         </p>
       </div>
 
       <div>
-        <h2 className="text-xl font-bold mb-4 flex items-center">
-            <Wand2 className="w-5 h-5 mr-2 text-muted-foreground" /> Currently Building
+        <h2 className="text-lg font-bold mb-3 flex items-center">
+            <Wand2 className="w-4 h-4 mr-2 text-muted-foreground" /> Currently Building
         </h2>
-        <div className="space-y-4">
+        <div className="space-y-3">
           {projects.map((project) => (
-            <div key={project.name} className="flex items-start space-x-4 group">
+            <div key={project.name} className="flex items-start space-x-3 group">
               <div>{project.icon}</div>
               <div>
-                <a href={project.link} className="font-semibold text-primary hover:underline">{project.name}</a>
-                <p className="text-muted-foreground">{project.description}</p>
+                <a href={project.link} className="font-semibold text-sm text-primary hover:underline">{project.name}</a>
+                <p className="text-sm text-muted-foreground">{project.description}</p>
               </div>
             </div>
           ))}
@@ -82,8 +81,8 @@ const MainContent = () => {
       </div>
       
       <div>
-        <h2 className="text-xl font-bold mb-4 flex items-center">
-            <Code className="w-5 h-5 mr-2 text-muted-foreground" /> Tech Stack
+        <h2 className="text-lg font-bold mb-3 flex items-center">
+            <Code className="w-4 h-4 mr-2 text-muted-foreground" /> Tech Stack
         </h2>
         <div className="flex flex-wrap gap-2">
           {techStack.map((tech) => (
@@ -93,8 +92,8 @@ const MainContent = () => {
       </div>
 
       <div>
-        <h2 className="text-xl font-bold mb-4 flex items-center">
-            <Globe className="w-5 h-5 mr-2 text-muted-foreground" /> Socials
+        <h2 className="text-lg font-bold mb-3 flex items-center">
+            <Globe className="w-4 h-4 mr-2 text-muted-foreground" /> Socials
         </h2>
         <div className="flex flex-wrap gap-3">
           {socials.map((social) => (
