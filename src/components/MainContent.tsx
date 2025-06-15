@@ -1,6 +1,7 @@
 import { User, Mail, Github, Linkedin, Twitter, Sparkle, Heart, Coffee, BookOpen, Send } from "lucide-react";
 import VerticalFadeCards from "./VerticalFadeCards";
 import ProjectsCard from "./ProjectsCard";
+import EducationCard from "./EducationCard";
 
 const AboutCard = () => (
   <div className="relative w-full">
@@ -143,7 +144,13 @@ const MainContent = () => {
     <div className="w-full h-full flex items-center justify-center p-4">
       <div className="w-full max-w-2xl h-full flex flex-col gap-8 items-center">
         <VerticalFadeCards>
-          {[<AboutCard key="about" />, <ExperienceCardPart1 key="exp1" />, <ExperienceCardPart2 key="exp2" />, <ProjectsCard key="projects" />]}
+          {[
+            <AboutCard key="about" />,
+            <EducationCard key="education" />,
+            <ExperienceCardPart1 key="exp1" />,
+            <ExperienceCardPart2 key="exp2" />,
+            <ProjectsCard key="projects" />
+          ]}
         </VerticalFadeCards>
       </div>
     </div>
