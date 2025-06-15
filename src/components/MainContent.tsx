@@ -57,14 +57,14 @@ const socials = [
 const MainContent = () => {
   return (
     <div className="space-y-8">
-      <div className="p-6 border border-border rounded-lg bg-card">
+      <div>
         <h2 className="text-3xl font-bold mb-2">👋 Hey, I'm SK3CHIE</h2>
         <p className="text-lg text-muted-foreground">
           Full-Stack Engineer | AWS Cloud Practitioner | Founder - <a href="#" className="text-primary hover:underline">Brandy</a>
         </p>
       </div>
 
-      <div className="border border-border rounded-lg bg-card p-6">
+      <div>
         <h2 className="text-xl font-bold mb-4 flex items-center">
             <Wand2 className="w-5 h-5 mr-2 text-muted-foreground" /> Currently Building
         </h2>
@@ -81,7 +81,7 @@ const MainContent = () => {
         </div>
       </div>
       
-      <div className="border border-border rounded-lg bg-card p-6">
+      <div>
         <h2 className="text-xl font-bold mb-4 flex items-center">
             <Code className="w-5 h-5 mr-2 text-muted-foreground" /> Tech Stack
         </h2>
@@ -92,7 +92,7 @@ const MainContent = () => {
         </div>
       </div>
 
-      <div className="border border-border rounded-lg bg-card p-6">
+      <div>
         <h2 className="text-xl font-bold mb-4 flex items-center">
             <Globe className="w-5 h-5 mr-2 text-muted-foreground" /> Socials
         </h2>
