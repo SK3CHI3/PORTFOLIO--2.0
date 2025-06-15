@@ -1,4 +1,3 @@
-
 import ProjectCard from "./ProjectCard";
 
 const projects = [
@@ -49,25 +48,21 @@ const projects = [
   },
 ];
 
-const CARD_HEIGHT = 120; // Make each card compact (adjust if needed)
+const CARD_HEIGHT = 120; // unchanged
 
 const ProjectsCard = () => {
-  // With 2 columns on desktop, 4 cards = 2 rows: height = 2 * CARD_HEIGHT + gaps.
-  // We'll set a maxHeight and make the grid scrollable if more than 4 cards.
-  // Adjusted for padding/gaps: 2 gaps per row (gap-5 = 20px each). So: 2*120 + 20 = 260px.
-
   return (
     <div className="relative w-full h-full">
       <div className="absolute -inset-2 bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20 rounded-2xl blur-xl opacity-50"></div>
       <div className="relative bg-gradient-to-br from-card via-card/95 to-card/90 rounded-2xl p-6 border border-border/50 backdrop-blur-sm shadow-2xl h-full">
-        <div className="text-center mb-6">
-          <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-xl mb-3">
-            <svg className="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <div className="text-center mb-3">
+          <div className="inline-flex items-center justify-center w-8 h-8 bg-primary/10 rounded-lg mb-1.5">
+            <svg className="w-4 h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path d="M12 2C6.477 2 2 6.477 2 12a9.966 9.966 0 003.313 7.352c.366.33.59.79.59 1.273v.026A3.36 3.36 0 006.67 22H17.33a3.36 3.36 0 00.767-1.349v-.027a1.5 1.5 0 01.591-1.273A9.978 9.978 0 0022 12c0-5.523-4.477-10-10-10z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </div>
-          <h2 className="text-2xl font-bold text-foreground mb-2">Projects</h2>
-          <div className="w-16 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full mx-auto"></div>
+          <h2 className="text-lg font-semibold text-foreground mb-1">Projects</h2>
+          <div className="w-10 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full mx-auto" />
         </div>
         {/* Scrollable grid for all projects, shows 4 (2x2) at a time, scroll for more, scrollbar hidden */}
         <div
@@ -100,4 +95,3 @@ const ProjectsCard = () => {
 };
 
 export default ProjectsCard;
-
