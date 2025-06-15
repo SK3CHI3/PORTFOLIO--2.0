@@ -1,7 +1,9 @@
+
 import ProfileCard from "@/components/ProfileCard";
 import MainContent from "@/components/MainContent";
 import { Link } from "react-router-dom";
-import GraduationCap from "@/components/icons/GraduationCap";
+// FIX: Import GraduationCap from lucide-react, not from a non-existent local file
+import { GraduationCap } from "lucide-react";
 
 const Index = () => {
   return (
