@@ -1,11 +1,16 @@
-
 import ProfileCard from "@/components/ProfileCard";
 import MainContent from "@/components/MainContent";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans flex items-center justify-center">
       <div className="container mx-auto p-6 lg:p-8 max-w-6xl">
+        <div className="flex justify-end pb-4">
+          <Link to="/projects" className="inline-block">
+            <span className="font-semibold text-primary hover:underline text-lg transition-colors">Projects</span>
+          </Link>
+        </div>
         <div className="bg-card border border-border rounded-2xl p-8 shadow-xl min-h-[600px]">
           <div className="flex flex-col lg:flex-row items-stretch gap-8 h-full">
             <div className="flex-shrink-0 lg:w-80 flex items-center">
