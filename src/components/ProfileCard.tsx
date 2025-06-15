@@ -1,7 +1,7 @@
+
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
-import { Briefcase, MapPin, Mail, Download, UserPlus, FolderOpen } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Briefcase, MapPin, Mail, Download, UserPlus } from "lucide-react";
 
 const ProfileCard = () => {
   return (
@@ -40,23 +40,15 @@ const ProfileCard = () => {
         </div>
       </div>
 
-      <div className="flex flex-col space-y-3">
-        <div className="flex space-x-3">
-          <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 py-2 transition-all duration-200 shadow-lg hover:shadow-xl">
-            <UserPlus className="w-4 h-4 mr-2" />
-            Hire Me
-          </Button>
-          <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold px-6 py-2 transition-all duration-200">
-            <Download className="w-4 h-4 mr-2" />
-            View Resume
-          </Button>
-        </div>
-        <Link to="/projects" className="w-full">
-          <Button variant="secondary" className="w-full font-semibold px-6 py-2 transition-all duration-200">
-            <FolderOpen className="w-4 h-4 mr-2" />
-            View Projects
-          </Button>
-        </Link>
+      <div className="flex space-x-3">
+        <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 py-2 transition-all duration-200 shadow-lg hover:shadow-xl">
+          <UserPlus className="w-4 h-4 mr-2" />
+          Hire Me
+        </Button>
+        <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold px-6 py-2 transition-all duration-200">
+          <Download className="w-4 h-4 mr-2" />
+          View Resume
+        </Button>
       </div>
     </div>
   );
