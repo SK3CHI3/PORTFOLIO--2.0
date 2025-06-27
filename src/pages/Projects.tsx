@@ -1,4 +1,3 @@
-
 import ProjectCard from "@/components/ProjectCard";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
@@ -63,7 +62,7 @@ const Projects = () => {
           </Button>
           <h1 className="text-3xl font-bold tracking-tight">Projects</h1>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="h-[70vh] overflow-y-auto grid grid-cols-1 sm:grid-cols-2 gap-6 pr-2">
           {projects.map((proj) => (
             <ProjectCard key={proj.name} {...proj} />
           ))}
