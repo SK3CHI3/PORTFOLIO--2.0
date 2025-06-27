@@ -8,7 +8,7 @@ Explore my **projects**, check out my **skills**, and get to know the story behi
 - 🛠️ Clean design, responsive layouts, no-nonsense UI
 
 
-   Or Shall I Say Build With GPT For idea reinement, Lovable For The Mockup And Me As The Mind Behind It All!!
+   Or Shall I Say Build With GPT For idea refinement, Lovable For The Mockup And Me As The Mind Behind It All!!
 ---
 
 **Let’s build something awesome together!** 
