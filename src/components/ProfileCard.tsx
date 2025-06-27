@@ -3,6 +3,21 @@ import { Button } from "@/components/ui/button";
 import { Briefcase, MapPin, Mail, Download, UserPlus } from "lucide-react";
 
 const ProfileCard = () => {
+  const handleHireMe = () => {
+    // Open email client with pre-filled subject and body
+    const email = "omollovictorotieno58@gmail.com";
+    const subject = "Hiring Inquiry - Full Stack Developer Position";
+    const body = "Hi Omollo,\n\nI came across your portfolio and would like to discuss potential opportunities. Please let me know when you're available for a conversation.\n\nBest regards,";
+    
+    const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.open(mailtoLink, '_blank');
+  };
+
+  const handleViewResume = () => {
+    // Open resume from Google Drive in new tab
+    window.open('https://drive.google.com/file/d/17o2E4RwLImI3FW7ReEGOnizf0IcDVzkm/view?usp=drive_link', '_blank');
+  };
+
   return (
     <div className="flex flex-col items-center justify-center space-y-4 h-full">
       <div className="text-center">
@@ -44,11 +59,18 @@ const ProfileCard = () => {
       </div>
 
       <div className="flex space-x-3">
-        <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 py-2 transition-all duration-200 shadow-lg hover:shadow-xl">
+        <Button 
+          onClick={handleHireMe}
+          className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 py-2 transition-all duration-200 shadow-lg hover:shadow-xl"
+        >
           <UserPlus className="w-4 h-4 mr-2" />
           Hire Me
         </Button>
-        <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold px-6 py-2 transition-all duration-200">
+        <Button 
+          onClick={handleViewResume}
+          variant="outline" 
+          className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold px-6 py-2 transition-all duration-200"
+        >
           <Download className="w-4 h-4 mr-2" />
           View Resume
         </Button>
