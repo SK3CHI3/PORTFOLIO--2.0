@@ -15,7 +15,7 @@ const ProfileCard = () => {
 
   const handleViewResume = () => {
     // Open resume from Google Drive in new tab
-    window.open('https://drive.google.com/file/d/17o2E4RwLImI3FW7ReEGOnizf0IcDVzkm/view?usp=drive_link', '_blank');
+    window.open('https://drive.google.com/file/d/1AMig98ieDoqW8hFIyPa2MzU00Ekzormw/view?usp=sharing', '_blank');
   };
 
   return (
