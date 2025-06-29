@@ -28,13 +28,13 @@ const tools = [
 const Skills = () => (
   <div className="relative w-full h-full">
     <div className="absolute -inset-2 bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20 rounded-2xl blur-xl opacity-50"></div>
-    <div className="relative bg-gradient-to-br from-card via-card/95 to-card/90 rounded-2xl p-8 border border-border/50 shadow-2xl h-full flex flex-col">
+    <div className="relative bg-gradient-to-br from-card via-card/95 to-card/90 rounded-2xl p-6 border border-border/50 shadow-2xl h-[520px] flex flex-col">
       {/* Header */}
-      <div className="flex items-center justify-center gap-3 mb-4">
-        <span className="inline-flex items-center justify-center w-8 h-8 bg-primary/10 rounded-lg">
-          <Layers className="w-5 h-5 text-primary" />
+      <div className="mb-4 flex items-center gap-3 justify-center">
+        <span className="inline-flex items-center justify-center w-10 h-10 bg-primary/10 rounded-lg">
+          <Layers className="w-7 h-7 text-primary" />
         </span>
-        <h1 className="text-2xl font-bold text-foreground tracking-tight">Skills</h1>
+        <h1 className="text-xl font-bold text-foreground tracking-tight">Skills</h1>
       </div>
       <div className="w-12 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full mx-auto mb-2" />
       {/* Scrollable area */}

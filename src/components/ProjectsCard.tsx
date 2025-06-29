@@ -92,15 +92,14 @@ const ProjectsCard = () => {
   return (
     <div className="relative w-full h-full">
       <div className="absolute -inset-2 bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20 rounded-2xl blur-xl opacity-50"></div>
-      <div className="relative bg-gradient-to-br from-card via-card/95 to-card/90 rounded-2xl p-6 border border-border/50 backdrop-blur-sm shadow-2xl h-full">
-        <div className="text-center mb-3">
-          <div className="inline-flex items-center justify-center w-8 h-8 bg-primary/10 rounded-lg mb-1.5">
-            <svg className="w-4 h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <div className="relative bg-gradient-to-br from-card via-card/95 to-card/90 rounded-2xl p-6 border border-border/50 backdrop-blur-sm shadow-2xl h-[520px] flex flex-col">
+        <div className="mb-4 flex items-center gap-3 justify-center">
+          <span className="inline-flex items-center justify-center w-10 h-10 bg-primary/10 rounded-lg">
+            <svg className="w-7 h-7 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path d="M12 2C6.477 2 2 6.477 2 12a9.966 9.966 0 003.313 7.352c.366.33.59.79.59 1.273v.026A3.36 3.36 0 006.67 22H17.33a3.36 3.36 0 00.767-1.349v-.027a1.5 1.5 0 01.591-1.273A9.978 9.978 0 0022 12c0-5.523-4.477-10-10-10z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
-          </div>
-          <h2 className="text-lg font-semibold text-foreground mb-1">Projects</h2>
-          <div className="w-10 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full mx-auto" />
+          </span>
+          <h2 className="text-xl font-bold text-foreground">Projects</h2>
         </div>
         {/* Scrollable grid for all projects, shows 4 (2x2) at a time, scroll for more, scrollbar hidden */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 overflow-y-auto scrollbar-hide max-h-[60vh] pr-2">

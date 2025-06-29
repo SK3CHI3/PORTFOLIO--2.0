@@ -74,15 +74,14 @@ const workData = [
 const WhereIveWorked = () => (
   <div className="relative w-full">
     <div className="absolute -inset-2 bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20 rounded-2xl blur-xl opacity-50"></div>
-    <div className="relative bg-gradient-to-br from-card via-card/95 to-card/90 rounded-2xl p-6 border border-border/50 backdrop-blur-sm shadow-2xl h-full flex flex-col">
-      <div className="mb-6 text-center">
-        <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-xl mb-2">
+    <div className="relative bg-gradient-to-br from-card via-card/95 to-card/90 rounded-2xl p-6 border border-border/50 backdrop-blur-sm shadow-2xl h-[520px] flex flex-col">
+      <div className="mb-4 flex items-center gap-3 justify-center">
+        <span className="inline-flex items-center justify-center w-10 h-10 bg-primary/10 rounded-lg">
           <Briefcase className="w-7 h-7 text-primary" />
-        </div>
-        <h2 className="text-2xl font-bold text-foreground mb-1">Where I've Worked</h2>
-        <div className="w-16 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full mx-auto"></div>
+        </span>
+        <h2 className="text-xl font-bold text-foreground">Where I've Worked</h2>
       </div>
-      <div className="w-full flex-1 max-h-[340px] pr-2 overflow-y-auto scrollbar-hide">
+      <div className="w-full flex-1 pr-2 overflow-y-auto scrollbar-hide">
         <div className="space-y-7">
           {workData.map((item, idx) => (
             <div key={idx} className="flex gap-4 items-start">

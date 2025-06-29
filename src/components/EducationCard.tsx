@@ -1,6 +1,4 @@
-
 import { GraduationCap, Cloud, Camera, Shield } from "lucide-react";
-import { ScrollArea } from "./ui/scroll-area";
 
 const educationList = [
   {
@@ -46,17 +44,16 @@ const educationList = [
 ];
 
 const EducationCard = () => (
-  <div className="relative w-full">
+  <div className="relative w-full h-full flex flex-col">
     <div className="absolute -inset-2 bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20 rounded-2xl blur-xl opacity-50"></div>
-    <div className="relative bg-gradient-to-br from-card via-card/95 to-card/90 rounded-2xl p-6 border border-border/50 backdrop-blur-sm shadow-2xl h-full flex flex-col">
-      <div className="mb-6 text-center">
-        <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-xl mb-2">
+    <div className="relative bg-gradient-to-br from-card via-card/95 to-card/90 rounded-2xl p-6 border border-border/50 backdrop-blur-sm shadow-2xl h-[520px] flex flex-col">
+      <div className="mb-4 flex items-center gap-3 justify-center">
+        <span className="inline-flex items-center justify-center w-10 h-10 bg-primary/10 rounded-lg">
           <GraduationCap className="w-7 h-7 text-primary" />
-        </div>
-        <h2 className="text-2xl font-bold text-foreground mb-1">Education &amp; Certifications</h2>
-        <div className="w-16 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full mx-auto"></div>
+        </span>
+        <h2 className="text-xl font-bold text-foreground">Education &amp; Certifications</h2>
       </div>
-      <ScrollArea className="w-full flex-1 max-h-[340px] pr-2">
+      <div className="w-full flex-1 pr-2 scrollbar-hide overflow-y-auto">
         <div className="space-y-7">
           {educationList.map((edu, idx) => (
             <div key={idx} className="flex gap-4 items-start">
@@ -65,7 +62,7 @@ const EducationCard = () => (
                 <div className="font-semibold text-lg text-primary">{edu.title}</div>
                 <div className="text-sm text-muted-foreground font-medium mb-1">
                   {edu.institution}
-                  {edu.institution && " · "} {edu.duration}
+                  {edu.institution && " · "}{edu.duration}
                   {!edu.institution && edu.duration}
                 </div>
                 <ul className="list-disc ml-5 mt-1 text-sm text-foreground space-y-1">
@@ -77,7 +74,20 @@ const EducationCard = () => (
             </div>
           ))}
         </div>
-      </ScrollArea>
+      </div>
+      <style>{`
+        .scrollbar-hide {
+          scrollbar-width: none; /* Firefox */
+          -ms-overflow-style: none; /* IE 10+ */
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none; /* Safari and Chrome */
+        }
+        /* Hide Radix custom scrollbar */
+        .scrollbar-hide .radix-scroll-area-scrollbar {
+          display: none !important;
+        }
+      `}</style>
     </div>
   </div>
 );
