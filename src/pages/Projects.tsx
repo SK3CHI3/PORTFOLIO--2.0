@@ -10,7 +10,15 @@ const projects = [
     language: "CSS",
     stars: 1,
     forks: 4,
-    url: "https://github.com/SK3CHI3/MY-PORTFOLIO-1.0"
+    url: "https://github.com/SK3CHI3/MY-PORTFOLIO-1.0",
+    liveUrl: "https://omollo-victor-potfolio.netlify.app"
+  },
+  {
+    name: "PORTFOLIO-2.0",
+    description: "PORTFOLIO-2.0—A modern, enhanced version of my portfolio, built with React and TypeScript. Features improved UI/UX, new projects, and a more dynamic presentation.",
+    language: "TypeScript",
+    url: "https://github.com/SK3CHI3/PORTFOLIO-2.0",
+    liveUrl: "https://omollo-victor.netlify.app"
   },
   {
     name: "URH-2.0",
