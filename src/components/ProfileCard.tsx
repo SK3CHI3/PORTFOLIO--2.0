@@ -43,7 +43,7 @@ const ProfileCard = () => {
           <Briefcase className="w-4 h-4 text-primary" />
           <div>
             <span className="font-medium">Founder at </span>
-            <span className="font-bold text-primary">Brandy</span>
+            <a href="https://brandyshop.netlify.app/" target="_blank" rel="noopener noreferrer" className="font-bold text-primary underline hover:text-primary/80">Brandy</a>
           </div>
         </div>
         
