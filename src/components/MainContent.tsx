@@ -22,7 +22,7 @@ const AboutCard = () => (
       <div className="flex-1 overflow-y-auto scrollbar-hide flex flex-col justify-center">
         <div className="space-y-6 text-center mx-auto">
           <p className="text-base leading-relaxed text-foreground">
-            I'm Omollo Victor — <span className="text-primary font-bold">Full Stack Engineer</span> & <span className="text-primary font-bold">AWS Cloud Practitioner</span>. I'm all about building secure, scalable systems that solve real-world problems and drive real impact.
+            I'm Omollo Victor — <span className="text-primary font-bold">Full Stack Engineer</span> & <span className="text-primary font-bold">AWS Cloud Practitioner</span>. I build secure, scalable systems that solve real-world problems and drive real impact.
           </p>
           <div className="bg-gradient-to-r from-primary/10 via-secondary/10 to-primary/10 rounded-xl p-4 border border-primary/20">
             <div className="flex items-center justify-center space-x-2 mb-3">
