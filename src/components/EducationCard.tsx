@@ -9,6 +9,7 @@ const educationList = [
     details: [
       "Full-stack development: React, Supabase, APIs, Git",
       "Built real-world apps solving social impact problems (MMU LMS, Brandy, URH)",
+      "Focused on scalable, secure, and socially driven tech solutions",
     ],
   },
   {
@@ -17,8 +18,9 @@ const educationList = [
     institution: "Amazon Web Services (AWS)",
     duration: "Certified – 2025",
     details: [
-      "Solid grasp of AWS core services, cloud security, and best practices",
-      "Strong foundation for building and deploying apps in the cloud",
+      "Solid understanding of AWS core services, cloud security, and architecture",
+      "Foundation for designing, deploying, and managing cloud-native apps",
+      "Experience with automation and cost optimization in AWS environments",
     ],
   },
   {
@@ -29,6 +31,7 @@ const educationList = [
     details: [
       "Focus on digital storytelling, media production & content strategy",
       "Blending tech with media for impactful communication",
+      "Explored emerging trends in digital journalism and multimedia platforms",
     ],
   },
   {
