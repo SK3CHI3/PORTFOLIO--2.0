@@ -79,7 +79,7 @@ const Projects = () => {
         </div>
         <div className="h-[70vh] overflow-y-auto grid grid-cols-1 sm:grid-cols-2 gap-6 pr-2">
           {projects.map((proj) => (
-            <ProjectCard key={proj.name} {...proj} />
+            <ProjectCard key={proj.name} {...proj} name={proj.name === "PORTFOLIO--2.0" ? `${proj.name} (Current)` : proj.name} />
           ))}
         </div>
       </div>
