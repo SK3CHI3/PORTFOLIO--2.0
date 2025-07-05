@@ -61,9 +61,7 @@ const EducationCard = () => (
               <div>
                 <div className="font-semibold text-lg text-primary">{edu.title}</div>
                 <div className="text-sm text-muted-foreground font-medium mb-1">
-                  {edu.institution}
-                  {edu.institution && " · "}{edu.duration}
-                  {!edu.institution && edu.duration}
+                  {edu.institution ? `${edu.institution} · ${edu.duration}` : edu.duration}
                 </div>
                 <ul className="list-disc ml-5 mt-1 text-sm text-foreground space-y-1">
                   {edu.details.map((line, i) => (
