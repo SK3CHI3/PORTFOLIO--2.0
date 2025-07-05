@@ -21,14 +21,22 @@ const ProfileCard = () => {
   return (
     <div className="flex flex-col items-center justify-center space-y-6 h-full px-2 sm:px-0">
       <div className="text-center">
-        <Avatar className="w-32 h-32 sm:w-40 sm:h-40 mx-auto border-4 border-primary/20 shadow-2xl overflow-hidden">
-          <AvatarImage 
-            src="/profile.jpg" 
-            alt="Omollo Victor" 
-            className="object-cover" 
-          />
-          <AvatarFallback className="text-2xl font-bold bg-primary/10">OV</AvatarFallback>
-        </Avatar>
+        <div className="transition-transform duration-200 hover:scale-105 hover:shadow-2xl rounded-full border-4 border-primary/30 shadow-xl overflow-hidden mx-auto w-32 h-32 sm:w-40 sm:h-40">
+          <picture>
+            {/* Future-proof: add WebP/AVIF sources if available */}
+            {/* <source srcSet="/profile.avif" type="image/avif" /> */}
+            {/* <source srcSet="/profile.webp" type="image/webp" /> */}
+            <img
+              src="/profile.jpg"
+              srcSet="/profile.jpg 1x, /profile.jpg 2x, /profile.jpg 3x"
+              alt="Omollo Victor"
+              className="object-cover w-full h-full rounded-full"
+              loading="eager"
+              decoding="async"
+              style={{ imageRendering: 'auto' }}
+            />
+          </picture>
+        </div>
         <div className="mt-2 sm:mt-4">
           <h1 className="text-2xl sm:text-2xl font-bold text-foreground">Omollo Victor</h1>
           <p className="text-sm sm:text-base text-primary font-medium mt-1">

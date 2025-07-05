@@ -33,12 +33,13 @@ const educationList = [
   },
   {
     icon: <Shield className="w-7 h-7 text-primary" />,
-    title: "Hack The Box Academy (Web Security Track)",
-    institution: "",
-    duration: "2025 – Completed",
+    title: "Hack The Box Academy – Web Security Track",
+    institution: "Hack The Box Academy",
+    duration: "Completed · 2025",
     details: [
-      "Learning hands-on web pentesting: HTTP requests, auth bypasses, and more",
-      "Strengthening backend & API security for real-world apps",
+      "Hands-on training in web app hacking: HTTP requests, auth bypass, XSS, etc.",
+      "Focused on securing APIs & backends through real-world labs",
+      "Built offensive & defensive skills for modern web app security",
     ],
   },
 ];
