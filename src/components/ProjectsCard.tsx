@@ -7,7 +7,7 @@ const projects = [
       "An AI-powered HR tool built on WhatsApp that tracks employee mood, detects burnout, and boosts workplace culture through weekly check-ins and real-time sentiment dashboards.",
     language: "TypeScript",
     url: "https://github.com/SK3CHI3/STAFF_PULSE",
-    liveUrl: "",
+    liveUrl: "https://staff-pulse.netlify.app/",
   },
   {
     name: "PORTFOLIO--2.0",
@@ -15,7 +15,7 @@ const projects = [
       "A sleek, minimal developer portfolio built with Vite, React, TypeScript, and Shadcn/UI — fast, responsive, and inspired by GitHub's profile layout.",
     language: "TypeScript",
     url: "https://github.com/SK3CHI3/PORTFOLIO--2.0",
-    liveUrl: "https://omollo-victor-potfolio.netlify.app/",
+    liveUrl: "https://omollo-victor.netlify.app/",
   },
   {
     name: "MY-PORTFOLIO-1.0",
@@ -23,7 +23,7 @@ const projects = [
       "My Portfolio—A sleek, responsive portfolio built with Vanilla JS, CSS & HTML. Showcases my skills, projects, and journey in tech. ⚡ Fast, mobile-friendly, and easy to update.",
     language: "CSS",
     url: "https://github.com/SK3CHI3/MY-PORTFOLIO-1.0",
-    liveUrl: "",
+    liveUrl: "https://omollo-victor-potfolio.netlify.app/",
   },
   {
     name: "URH-2.0",

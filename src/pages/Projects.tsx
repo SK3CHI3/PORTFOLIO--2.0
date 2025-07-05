@@ -11,14 +11,21 @@ const projects = [
     stars: 1,
     forks: 4,
     url: "https://github.com/SK3CHI3/MY-PORTFOLIO-1.0",
-    liveUrl: "https://omollo-victor-potfolio.netlify.app"
+    liveUrl: "https://omollo-victor-potfolio.netlify.app/"
   },
   {
     name: "PORTFOLIO-2.0",
     description: "PORTFOLIO-2.0—A modern, enhanced version of my portfolio, built with React and TypeScript. Features improved UI/UX, new projects, and a more dynamic presentation.",
     language: "TypeScript",
     url: "https://github.com/SK3CHI3/PORTFOLIO-2.0",
-    liveUrl: "https://omollo-victor.netlify.app"
+    liveUrl: "https://omollo-victor.netlify.app/"
+  },
+  {
+    name: "StaffPulse",
+    description: "An AI-powered HR tool built on WhatsApp that tracks employee mood, detects burnout, and boosts workplace culture through weekly check-ins and real-time sentiment dashboards.",
+    language: "TypeScript",
+    url: "https://github.com/SK3CHI3/STAFF_PULSE",
+    liveUrl: "https://staff-pulse.netlify.app/"
   },
   {
     name: "URH-2.0",
