@@ -38,7 +38,7 @@ const Skills = () => (
       </div>
       <div className="w-12 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full mx-auto mb-2" />
       {/* Scrollable area */}
-      <div className="w-full flex-1 max-h-[420px] pr-2 scrollbar-hide overflow-y-auto flex items-center">
+      <div className="w-full flex-1 max-h-[420px] pr-2 scrollbar-hide overflow-y-auto">
         <div className="flex flex-col gap-7 w-full">
           {/* Core Stack */}
           <section>
