@@ -48,7 +48,7 @@ const educationList = [
 ];
 
 const EducationCard = () => (
-  <div className="relative w-full h-full flex flex-col">
+  <div className="relative w-full">
     <div className="absolute -inset-2 bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20 rounded-2xl blur-xl opacity-50"></div>
     <div className="relative bg-gradient-to-br from-card via-card/95 to-card/90 rounded-2xl p-6 border border-border/50 backdrop-blur-sm shadow-2xl h-[520px] flex flex-col">
       <div className="mb-4 flex items-center gap-3 justify-center">
@@ -58,7 +58,7 @@ const EducationCard = () => (
         <h2 className="text-xl font-bold text-foreground">Education &amp; Certifications</h2>
       </div>
       <div className="w-full flex-1 pr-2 scrollbar-hide overflow-y-auto">
-        <div className="space-y-7">
+        <div className="space-y-7 flex flex-col justify-center min-h-[400px]">
           {educationList.map((edu, idx) => (
             <div key={idx} className="flex gap-4 items-start">
               <div className="pt-1">{edu.icon}</div>

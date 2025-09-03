@@ -26,7 +26,7 @@ const tools = [
 ];
 
 const Skills = () => (
-  <div className="relative w-full h-full">
+  <div className="relative w-full">
     <div className="absolute -inset-2 bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20 rounded-2xl blur-xl opacity-50"></div>
     <div className="relative bg-gradient-to-br from-card via-card/95 to-card/90 rounded-2xl p-6 border border-border/50 shadow-2xl h-[520px] flex flex-col">
       {/* Header */}
@@ -38,8 +38,8 @@ const Skills = () => (
       </div>
       <div className="w-12 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full mx-auto mb-2" />
       {/* Scrollable area */}
-      <div className="w-full flex-1 max-h-[420px] pr-2 scrollbar-hide overflow-y-auto">
-        <div className="flex flex-col gap-7">
+      <div className="w-full flex-1 max-h-[420px] pr-2 scrollbar-hide overflow-y-auto flex items-center">
+        <div className="flex flex-col gap-7 w-full">
           {/* Core Stack */}
           <section>
             <h2 className="text-lg font-semibold mb-3 flex items-center gap-2">

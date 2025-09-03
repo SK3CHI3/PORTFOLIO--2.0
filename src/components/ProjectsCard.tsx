@@ -90,7 +90,7 @@ const CARD_HEIGHT = 120;
 
 const ProjectsCard = () => {
   return (
-    <div className="relative w-full h-full">
+    <div className="relative w-full">
       <div className="absolute -inset-2 bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20 rounded-2xl blur-xl opacity-50"></div>
       <div className="relative bg-gradient-to-br from-card via-card/95 to-card/90 rounded-2xl p-6 border border-border/50 backdrop-blur-sm shadow-2xl h-[520px] flex flex-col">
         <div className="mb-4 flex items-center gap-3 justify-center">
@@ -102,13 +102,14 @@ const ProjectsCard = () => {
           <h2 className="text-xl font-bold text-foreground">Projects</h2>
         </div>
         {/* Scrollable grid for all projects, shows 4 (2x2) at a time, scroll for more, scrollbar hidden */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 overflow-y-auto scrollbar-hide max-h-[60vh] pr-2">
-          {projects.map((proj) => (
-            <ProjectCard key={proj.name} {...proj} />
-          ))}
-          <div className="col-span-full flex justify-center items-center">
-            <div className="relative bg-card border border-border rounded-xl shadow hover:shadow-lg transition-shadow group p-6 flex flex-col items-center text-center w-full max-w-xs mx-auto">
-              <span className="font-semibold text-foreground text-base mb-2">Other Projects</span>
+        <div className="flex-1 flex items-center justify-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 overflow-y-auto scrollbar-hide max-h-[60vh] pr-2">
+            {projects.map((proj) => (
+              <ProjectCard key={proj.name} {...proj} />
+            ))}
+            <div className="col-span-full flex justify-center items-center">
+              <div className="relative bg-card border border-border rounded-xl shadow hover:shadow-lg transition-shadow group p-6 flex flex-col items-center text-center w-full max-w-xs mx-auto">
+                <span className="font-semibold text-foreground text-base mb-2">Other Projects</span>
               <p className="text-muted-foreground text-sm mb-4">Not yet satisfied?<br />Visit my cooking place:</p>
               <a
                 href="https://github.com/SK3CHI3"

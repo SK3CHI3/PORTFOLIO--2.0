@@ -47,6 +47,7 @@ const Contact = () => (
           <span className="inline-block bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Let's Connect</span>
         </h1>
         <p className="text-center text-muted-foreground mb-8 text-lg font-medium">Reach out for collaborations, opportunities, or just to say hi!</p>
+        <p className="text-center text-muted-foreground mb-8 text-lg font-medium">Reach out for collaborations, opportunities, or just to say hi!</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 w-full">
           {contacts.map((c) => (
             <a

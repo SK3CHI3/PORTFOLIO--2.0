@@ -10,17 +10,17 @@ import React from "react";
 import ProfileCard from "./ProfileCard";
 
 const AboutCard = () => (
-  <div className="relative bg-gradient-to-br from-card via-card/95 to-card/90 rounded-2xl p-6 border border-border/50 backdrop-blur-sm shadow-2xl h-full flex flex-col">
+  <div className="relative w-full">
     <div className="absolute -inset-2 bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20 rounded-2xl blur-xl opacity-50"></div>
-    <div className="relative z-10 flex flex-col h-full">
+    <div className="relative bg-gradient-to-br from-card via-card/95 to-card/90 rounded-2xl p-6 border border-border/50 backdrop-blur-sm shadow-2xl h-[520px] flex flex-col">
       <div className="mb-4 flex items-center gap-3 justify-center">
         <span className="inline-flex items-center justify-center w-10 h-10 bg-primary/10 rounded-lg">
           <User className="w-7 h-7 text-primary" />
         </span>
         <h2 className="text-xl font-bold text-foreground">About Me</h2>
       </div>
-      <div className="flex-1 overflow-y-auto scrollbar-hide flex flex-col justify-center">
-        <div className="space-y-6 text-center mx-auto">
+      <div className="w-full flex-1 pr-2 overflow-y-auto scrollbar-hide flex items-center">
+        <div className="space-y-6 text-center w-full">
           <p className="text-base leading-relaxed text-foreground">
             I'm Omollo Victor — <span className="text-primary font-bold">Full Stack Engineer</span> & <span className="text-primary font-bold">AWS Cloud Practitioner</span>. I build secure, scalable systems that solve real-world problems and drive real impact.
           </p>
@@ -56,7 +56,7 @@ const fadeInStyle = `
   }
 `;
 
-const MainContent = () => {
+const MainContent: React.FC = () => {
   return (
     <>
       {/* Mobile: About Me static, rest scrollable snap/fade */}
@@ -70,15 +70,29 @@ const MainContent = () => {
           display: none; /* Safari and Chrome */
         }
       `}</style>
-      <div className="w-full h-full flex sm:hidden flex-col items-center justify-center p-2">
-        <div className="w-full max-w-full h-[520px] overflow-y-auto snap-y snap-mandatory flex flex-col scrollbar-hide">
-          <div className="snap-start h-[520px] flex-shrink-0 fade-in-card"><ProfileCard /></div>
-          <div className="snap-start h-[520px] flex-shrink-0 fade-in-card"><AboutCard /></div>
-          <div className="snap-start h-[520px] flex-shrink-0 fade-in-card"><EducationCard /></div>
-          <div className="snap-start h-[520px] flex-shrink-0 fade-in-card"><WhereIveWorked /></div>
-          <div className="snap-start h-[520px] flex-shrink-0 fade-in-card"><ProjectsCard /></div>
-          <div className="snap-start h-[520px] flex-shrink-0 fade-in-card"><Skills /></div>
-          <div className="snap-start h-[520px] flex-shrink-0 fade-in-card"><Contact /></div>
+      <div className="w-full h-full flex sm:hidden">
+        <div className="w-full h-screen overflow-y-auto snap-y snap-mandatory flex flex-col scrollbar-hide">
+          <div className="snap-start h-screen flex-shrink-0 fade-in-card px-4 flex items-center justify-center">
+            <div className="w-full max-w-xl"><ProfileCard /></div>
+          </div>
+          <div className="snap-start h-screen flex-shrink-0 fade-in-card px-4 flex items-center justify-center">
+            <div className="w-full max-w-xl"><AboutCard /></div>
+          </div>
+          <div className="snap-start h-screen flex-shrink-0 fade-in-card px-4 flex items-center justify-center">
+            <div className="w-full max-w-xl"><EducationCard /></div>
+          </div>
+          <div className="snap-start h-screen flex-shrink-0 fade-in-card px-4 flex items-center justify-center">
+            <div className="w-full max-w-xl"><WhereIveWorked /></div>
+          </div>
+          <div className="snap-start h-screen flex-shrink-0 fade-in-card px-4 flex items-center justify-center">
+            <div className="w-full max-w-xl"><ProjectsCard /></div>
+          </div>
+          <div className="snap-start h-screen flex-shrink-0 fade-in-card px-4 flex items-center justify-center">
+            <div className="w-full max-w-xl"><Skills /></div>
+          </div>
+          <div className="snap-start h-screen flex-shrink-0 fade-in-card px-4 flex items-center justify-center">
+            <div className="w-full max-w-xl"><Contact /></div>
+          </div>
         </div>
       </div>
       {/* Desktop: original ScrollArea/fade cards */}
