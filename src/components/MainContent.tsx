@@ -1,8 +1,7 @@
-import { User, Sparkle, Heart, Coffee } from "lucide-react";
-import VerticalFadeCards from "./VerticalFadeCards";
+import { User, Heart, Coffee } from "lucide-react";
+import ScrollFadePages from "./ScrollFadePages";
 import ProjectsCard from "./ProjectsCard";
 import EducationCard from "./EducationCard";
-import { ScrollArea } from "./ui/scroll-area";
 import Skills from "@/pages/Skills";
 import WhereIveWorked from "@/pages/WhereIveWorked";
 import Contact from "@/pages/Contact";
@@ -57,62 +56,24 @@ const fadeInStyle = `
 `;
 
 const MainContent: React.FC = () => {
+  const pages = [
+    <div className="px-4 flex items-center justify-center h-full"><div className="w-full max-w-xl"><ProfileCard /></div></div>,
+    <div className="px-4 flex items-center justify-center h-full"><div className="w-full max-w-xl"><AboutCard /></div></div>,
+    <div className="px-4 flex items-center justify-center h-full"><div className="w-full max-w-xl"><EducationCard /></div></div>,
+    <div className="px-4 flex items-center justify-center h-full"><div className="w-full max-w-xl"><WhereIveWorked /></div></div>,
+    <div className="px-4 flex items-center justify-center h-full"><div className="w-full max-w-xl"><ProjectsCard /></div></div>,
+    <div className="px-4 flex items-center justify-center h-full"><div className="w-full max-w-xl"><Skills /></div></div>,
+    <div className="px-4 flex items-center justify-center h-full"><div className="w-full max-w-xl"><Contact /></div></div>
+  ];
+
   return (
     <>
-      {/* Mobile: About Me static, rest scrollable snap/fade */}
       <style>{fadeInStyle}</style>
-      <style>{`
-        .scrollbar-hide {
-          scrollbar-width: none; /* Firefox */
-          -ms-overflow-style: none; /* IE 10+ */
-        }
-        .scrollbar-hide::-webkit-scrollbar {
-          display: none; /* Safari and Chrome */
-        }
-      `}</style>
-      <div className="w-full h-full flex sm:hidden">
-        <div className="w-full h-screen overflow-y-auto snap-y snap-mandatory flex flex-col scrollbar-hide">
-          <div className="snap-start h-screen flex-shrink-0 fade-in-card px-4 flex items-center justify-center">
-            <div className="w-full max-w-xl"><ProfileCard /></div>
-          </div>
-          <div className="snap-start h-screen flex-shrink-0 fade-in-card px-4 flex items-center justify-center">
-            <div className="w-full max-w-xl"><AboutCard /></div>
-          </div>
-          <div className="snap-start h-screen flex-shrink-0 fade-in-card px-4 flex items-center justify-center">
-            <div className="w-full max-w-xl"><EducationCard /></div>
-          </div>
-          <div className="snap-start h-screen flex-shrink-0 fade-in-card px-4 flex items-center justify-center">
-            <div className="w-full max-w-xl"><WhereIveWorked /></div>
-          </div>
-          <div className="snap-start h-screen flex-shrink-0 fade-in-card px-4 flex items-center justify-center">
-            <div className="w-full max-w-xl"><ProjectsCard /></div>
-          </div>
-          <div className="snap-start h-screen flex-shrink-0 fade-in-card px-4 flex items-center justify-center">
-            <div className="w-full max-w-xl"><Skills /></div>
-          </div>
-          <div className="snap-start h-screen flex-shrink-0 fade-in-card px-4 flex items-center justify-center">
-            <div className="w-full max-w-xl"><Contact /></div>
-          </div>
-        </div>
-      </div>
-      {/* Desktop: original ScrollArea/fade cards */}
-      <div className="w-full h-full hidden sm:flex items-center justify-center p-4">
-        <div className="w-full max-w-2xl h-full flex flex-col gap-8 items-center">
-          <ScrollArea className="w-full max-h-[80vh]">
-            <div className="flex flex-col gap-8">
-              <VerticalFadeCards>
-                {[
-                  <AboutCard key="about" />, 
-                  <EducationCard key="education" />, 
-                  <WhereIveWorked key="whereiveworked" />, 
-                  <ProjectsCard key="projects" />, 
-                  <Skills key="skills" />,
-                  <Contact key="contact" />
-                ]}
-              </VerticalFadeCards>
-            </div>
-          </ScrollArea>
-        </div>
+      {/* Mobile and Desktop: Unified fade transition system */}
+      <div className="w-full h-full">
+        <ScrollFadePages className="w-full h-full">
+          {pages}
+        </ScrollFadePages>
       </div>
     </>
   );
