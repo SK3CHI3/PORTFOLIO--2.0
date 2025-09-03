@@ -1,7 +1,8 @@
 import { User, Sparkle, Heart, Coffee } from "lucide-react";
-import AnimatedCardCarousel from "./AnimatedCardCarousel";
+import VerticalFadeCards from "./VerticalFadeCards";
 import ProjectsCard from "./ProjectsCard";
 import EducationCard from "./EducationCard";
+import { ScrollArea } from "./ui/scroll-area";
 import Skills from "@/pages/Skills";
 import WhereIveWorked from "@/pages/WhereIveWorked";
 import Contact from "@/pages/Contact";
@@ -56,19 +57,9 @@ const fadeInStyle = `
 `;
 
 const MainContent: React.FC = () => {
-  // All cards for the carousel
-  const allCards = [
-    <ProfileCard key="profile" />,
-    <AboutCard key="about" />, 
-    <EducationCard key="education" />, 
-    <WhereIveWorked key="whereiveworked" />, 
-    <ProjectsCard key="projects" />, 
-    <Skills key="skills" />,
-    <Contact key="contact" />
-  ];
-
   return (
     <>
+      {/* Mobile: About Me static, rest scrollable snap/fade */}
       <style>{fadeInStyle}</style>
       <style>{`
         .scrollbar-hide {
@@ -79,18 +70,48 @@ const MainContent: React.FC = () => {
           display: none; /* Safari and Chrome */
         }
       `}</style>
-      
-      {/* Mobile: Animated Carousel */}
       <div className="w-full h-full flex sm:hidden">
-        <div className="w-full h-screen px-4 py-8">
-          <AnimatedCardCarousel cards={allCards} autoPlayInterval={6000} />
+        <div className="w-full h-screen overflow-y-auto snap-y snap-mandatory flex flex-col scrollbar-hide">
+          <div className="snap-start h-screen flex-shrink-0 fade-in-card px-4 flex items-center justify-center">
+            <div className="w-full max-w-xl"><ProfileCard /></div>
+          </div>
+          <div className="snap-start h-screen flex-shrink-0 fade-in-card px-4 flex items-center justify-center">
+            <div className="w-full max-w-xl"><AboutCard /></div>
+          </div>
+          <div className="snap-start h-screen flex-shrink-0 fade-in-card px-4 flex items-center justify-center">
+            <div className="w-full max-w-xl"><EducationCard /></div>
+          </div>
+          <div className="snap-start h-screen flex-shrink-0 fade-in-card px-4 flex items-center justify-center">
+            <div className="w-full max-w-xl"><WhereIveWorked /></div>
+          </div>
+          <div className="snap-start h-screen flex-shrink-0 fade-in-card px-4 flex items-center justify-center">
+            <div className="w-full max-w-xl"><ProjectsCard /></div>
+          </div>
+          <div className="snap-start h-screen flex-shrink-0 fade-in-card px-4 flex items-center justify-center">
+            <div className="w-full max-w-xl"><Skills /></div>
+          </div>
+          <div className="snap-start h-screen flex-shrink-0 fade-in-card px-4 flex items-center justify-center">
+            <div className="w-full max-w-xl"><Contact /></div>
+          </div>
         </div>
       </div>
-      
-      {/* Desktop: Animated Carousel */}
+      {/* Desktop: original ScrollArea/fade cards */}
       <div className="w-full h-full hidden sm:flex items-center justify-center p-4">
-        <div className="w-full max-w-2xl h-full">
-          <AnimatedCardCarousel cards={allCards} autoPlayInterval={7000} />
+        <div className="w-full max-w-2xl h-full flex flex-col gap-8 items-center">
+          <ScrollArea className="w-full max-h-[80vh]">
+            <div className="flex flex-col gap-8">
+              <VerticalFadeCards>
+                {[
+                  <AboutCard key="about" />, 
+                  <EducationCard key="education" />, 
+                  <WhereIveWorked key="whereiveworked" />, 
+                  <ProjectsCard key="projects" />, 
+                  <Skills key="skills" />,
+                  <Contact key="contact" />
+                ]}
+              </VerticalFadeCards>
+            </div>
+          </ScrollArea>
         </div>
       </div>
     </>
