@@ -58,12 +58,20 @@ const projects = [
     liveUrl: "https://kagua-gava.netlify.app/",
   },
   {
-    name: "Hex-",
+    name: "HEX AI",
     description:
-      "Hex is a cybersecurity AI assistant for ethical hackers and red teamers. It simulates attacks, crafts payloads, and analyzes recon data.",
+      "HEX AI is a cybersecurity AI assistant for ethical hackers and red teamers. It simulates attacks, crafts payloads, and analyzes recon data.",
     language: "TypeScript",
     url: "https://github.com/SK3CHI3/Hex-",
-    liveUrl: "https://hexai-c.netlify.app/",
+    liveUrl: "https://hexai.website",
+  },
+  {
+    name: "REX",
+    description:
+      "REX (Police Brutality Tracker) - A platform for tracking and documenting police brutality incidents to promote transparency and accountability.",
+    language: "TypeScript",
+    url: "https://github.com/SK3CHI3/REX",
+    liveUrl: "https://rextracker.online/",
   },
   // --- New project 1 ---
   {
@@ -72,7 +80,7 @@ const projects = [
       "Website for Motherly Care Children's Home & School in Ruai, Kenya. Built for transparency, donor engagement, and outreach.",
     language: "JavaScript",
     url: "https://github.com/SK3CHI3/MOTHERY-CARE-CHILDRENS-HOME",
-    liveUrl: "",
+    liveUrl: "https://motherlycarechildrenshome.org/",
   },
   // --- New project 2 ---
   {

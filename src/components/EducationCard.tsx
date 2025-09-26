@@ -5,7 +5,7 @@ const educationList = [
     icon: <GraduationCap className="w-7 h-7 text-primary" />,
     title: "Software Engineering Program",
     institution: "Power Learn Project (PLP Africa)",
-    duration: "2025 – Present",
+    duration: "Graduated – November 2025",
     details: [
       "Full-stack development: React, Supabase, APIs, Git",
       "Built real-world apps solving social impact problems (MMU LMS, Brandy, URH)",
@@ -21,6 +21,17 @@ const educationList = [
       "Solid understanding of AWS core services, cloud security, and architecture",
       "Foundation for designing, deploying, and managing cloud-native apps",
       "Experience with automation and cost optimization in AWS environments",
+    ],
+  },
+  {
+    icon: <Shield className="w-7 h-7 text-primary" />,
+    title: "Introduction to Cybersecurity",
+    institution: "Cisco Networking Academy",
+    duration: "Certified – 2025",
+    details: [
+      "Comprehensive understanding of cybersecurity fundamentals and best practices",
+      "Network security, threat detection, and incident response methodologies",
+      "Foundation for advanced cybersecurity roles and specialized certifications",
     ],
   },
   {

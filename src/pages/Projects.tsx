@@ -56,11 +56,20 @@ const projects = [
     url: "https://github.com/SK3CHI3/KAGUA-1.0"
   },
   {
-    name: "Hex-",
-    description: "Hex is a cybersecurity AI assistant for ethical hackers and red teamers. Powered by DeepSeek LLM, it simulates real-world attacks, crafts payloads, and analyzes recon data — all in a controlled, le…",
+    name: "HEX AI",
+    description: "HEX AI is a cybersecurity AI assistant for ethical hackers and red teamers. Powered by DeepSeek LLM, it simulates real-world attacks, crafts payloads, and analyzes recon data — all in a controlled, le…",
     language: "TypeScript",
     stars: 1,
-    url: "https://github.com/SK3CHI3/Hex-"
+    url: "https://github.com/SK3CHI3/Hex-",
+    liveUrl: "https://hexai.website"
+  },
+  {
+    name: "REX",
+    description: "REX (Police Brutality Tracker) - A platform for tracking and documenting police brutality incidents to promote transparency and accountability in law enforcement.",
+    language: "TypeScript",
+    stars: 1,
+    url: "https://github.com/SK3CHI3/REX",
+    liveUrl: "https://rextracker.online/"
   },
 ];
 
