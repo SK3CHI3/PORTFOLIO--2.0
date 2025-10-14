@@ -1,14 +1,19 @@
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
-
 User-agent: *
 Allow: /
+
+# Allow crawling of all pages
+Allow: /projects
+Allow: /contact
+Allow: /about
+
+# Sitemap location
+Sitemap: https://omollo-victor.is-a.dev/sitemap.xml
+
+# Disallow common sensitive paths (just in case)
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_next/
+Disallow: /node_modules/
+
+# Crawl delay for polite crawling
+Crawl-delay: 1
