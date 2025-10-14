@@ -1,14 +1,27 @@
+import { useState } from "react";
 import ProfileCard from "@/components/ProfileCard";
 import MainContent from "@/components/MainContent";
+import AIChatButton from "@/components/AIChatButton";
+import AIChat from "@/components/AIChat";
 import { Link } from "react-router-dom";
 import { GraduationCap } from "lucide-react";
 
 const Index = () => {
+  const [isChatOpen, setIsChatOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-background text-foreground font-sans flex items-center justify-center">
       {/* Mobile: Direct content without extra card wrapper */}
       <div className="sm:hidden w-full h-full">
         <MainContent />
+        
+        {/* Mobile Chat - Full screen overlay */}
+        {isChatOpen && (
+          <AIChat 
+            onClose={() => setIsChatOpen(false)} 
+            isMobile={true}
+          />
+        )}
       </div>
       
       {/* Desktop: Keep the original card wrapper */}
@@ -19,11 +32,28 @@ const Index = () => {
               <ProfileCard />
             </div>
             <div className="flex-1 w-full">
-              <MainContent />
+              {isChatOpen ? (
+                <div className="w-full h-full flex items-center justify-center p-4">
+                  <div className="w-full max-w-2xl">
+                    <AIChat 
+                      onClose={() => setIsChatOpen(false)} 
+                      isMobile={false}
+                    />
+                  </div>
+                </div>
+              ) : (
+                <MainContent />
+              )}
             </div>
           </div>
         </div>
       </div>
+
+      {/* Floating AI Chat Button */}
+      <AIChatButton 
+        onClick={() => setIsChatOpen(true)} 
+        isOpen={isChatOpen}
+      />
     </div>
   );
 };
