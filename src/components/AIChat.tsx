@@ -27,14 +27,24 @@ const AIChat = ({ onClose, isMobile = false }: AIChatProps) => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  // Smooth auto scroll to bottom when messages change
+  // Auto scroll to bottom when messages change
   useEffect(() => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollTo({
-        top: scrollRef.current.scrollHeight,
-        behavior: 'smooth'
-      });
-    }
+    const scrollToBottom = () => {
+      if (scrollRef.current) {
+        // Use requestAnimationFrame to ensure DOM has updated
+        requestAnimationFrame(() => {
+          if (scrollRef.current) {
+            scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
+          }
+        });
+      }
+    };
+    
+    scrollToBottom();
+    // Also scroll again after a short delay to catch late updates
+    const timeoutId = setTimeout(scrollToBottom, 100);
+    
+    return () => clearTimeout(timeoutId);
   }, [messages, streamingMessage]);
 
   // Focus input on mount
@@ -46,12 +56,24 @@ const AIChat = ({ onClose, isMobile = false }: AIChatProps) => {
     if (input.trim() && !isLoading) {
       sendMessage(input);
       setInput("");
+      // Force scroll after sending
+      setTimeout(() => {
+        if (scrollRef.current) {
+          scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
+        }
+      }, 50);
     }
   };
 
   const handlePresetClick = (question: string) => {
     if (!isLoading) {
       sendMessage(question);
+      // Force scroll after sending
+      setTimeout(() => {
+        if (scrollRef.current) {
+          scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
+        }
+      }, 50);
     }
   };
 
