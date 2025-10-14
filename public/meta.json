@@ -1,0 +1,35 @@
+{
+  "title": "Omollo Victor - Full-Stack Software Engineer | Portfolio",
+  "description": "Full-Stack Software Engineer and AWS Certified Cloud Practitioner based in Nairobi, Kenya. Specializing in React, Next.js, TypeScript, and modern web technologies.",
+  "image": "https://omollo-victor.is-a.dev/profile.jpg",
+  "url": "https://omollo-victor.is-a.dev/",
+  "type": "website",
+  "author": "Omollo Victor Otieno",
+  "keywords": [
+    "Full-Stack Developer",
+    "Software Engineer",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "AWS",
+    "Portfolio",
+    "Nairobi",
+    "Kenya",
+    "Web Developer"
+  ],
+  "og": {
+    "title": "Omollo Victor - Full-Stack Software Engineer | Portfolio",
+    "description": "Full-Stack Software Engineer and AWS Certified Cloud Practitioner based in Nairobi, Kenya. Specializing in React, Next.js, TypeScript, and modern web technologies.",
+    "image": "https://omollo-victor.is-a.dev/profile.jpg",
+    "url": "https://omollo-victor.is-a.dev/",
+    "type": "website",
+    "site_name": "Omollo Victor Portfolio"
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "title": "Omollo Victor - Full-Stack Software Engineer | Portfolio",
+    "description": "Full-Stack Software Engineer and AWS Certified Cloud Practitioner based in Nairobi, Kenya. Specializing in React, Next.js, TypeScript, and modern web technologies.",
+    "image": "https://omollo-victor.is-a.dev/profile.jpg",
+    "url": "https://omollo-victor.is-a.dev/"
+  }
+}

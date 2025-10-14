@@ -1,0 +1,25 @@
+{
+  "name": "Omollo Victor - Full-Stack Software Engineer",
+  "short_name": "Victor Portfolio",
+  "description": "Portfolio of Omollo Victor, Full-Stack Software Engineer based in Nairobi, Kenya",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16 32x32 48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["portfolio", "developer", "software"],
+  "lang": "en"
+}
