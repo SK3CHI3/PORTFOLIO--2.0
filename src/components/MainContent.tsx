@@ -56,7 +56,11 @@ const fadeInStyle = `
   }
 `;
 
-const MainContent: React.FC = () => {
+interface MainContentProps {
+  onAIClick?: () => void;
+}
+
+const MainContent: React.FC<MainContentProps> = ({ onAIClick }) => {
   return (
     <>
       {/* Mobile: About Me static, rest scrollable snap/fade */}
@@ -73,7 +77,7 @@ const MainContent: React.FC = () => {
       <div className="w-full h-full flex sm:hidden">
         <div className="w-full h-screen overflow-y-auto snap-y snap-mandatory flex flex-col scrollbar-hide">
           <div className="snap-start h-screen flex-shrink-0 fade-in-card px-4 flex items-center justify-center">
-            <div className="w-full max-w-xl"><ProfileCard /></div>
+            <div className="w-full max-w-xl"><ProfileCard onAIClick={onAIClick} /></div>
           </div>
           <div className="snap-start h-screen flex-shrink-0 fade-in-card px-4 flex items-center justify-center">
             <div className="w-full max-w-xl"><AboutCard /></div>

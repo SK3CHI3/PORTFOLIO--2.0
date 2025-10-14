@@ -1,8 +1,12 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
-import { Briefcase, MapPin, Mail, Download, UserPlus } from "lucide-react";
+import { Briefcase, MapPin, Mail, Download, UserPlus, Sparkles } from "lucide-react";
 
-const ProfileCard = () => {
+interface ProfileCardProps {
+  onAIClick?: () => void;
+}
+
+const ProfileCard = ({ onAIClick }: ProfileCardProps) => {
   const handleHireMe = () => {
     // Open email client with pre-filled subject and body
     const email = "omollovictorotieno58@gmail.com";
@@ -21,21 +25,34 @@ const ProfileCard = () => {
   return (
     <div className="flex flex-col items-center justify-center space-y-6 h-full px-2 sm:px-0">
       <div className="text-center">
-        <div className="transition-transform duration-200 hover:scale-105 hover:shadow-2xl rounded-full border-4 border-primary/30 shadow-xl overflow-hidden mx-auto w-32 h-32 sm:w-40 sm:h-40">
-          <picture>
-            {/* Future-proof: add WebP/AVIF sources if available */}
-            {/* <source srcSet="/profile.avif" type="image/avif" /> */}
-            {/* <source srcSet="/profile.webp" type="image/webp" /> */}
-            <img
-              src="/profile.jpg"
-              srcSet="/profile.jpg 1x, /profile.jpg 2x, /profile.jpg 3x"
-              alt="Omollo Victor"
-              className="object-cover w-full h-full rounded-full"
-              loading="eager"
-              decoding="async"
-              style={{ imageRendering: 'auto' }}
-            />
-          </picture>
+        <div className="relative inline-block">
+          <div className="transition-transform duration-200 hover:scale-105 hover:shadow-2xl rounded-full border-4 border-primary/30 shadow-xl overflow-hidden w-32 h-32 sm:w-40 sm:h-40">
+            <picture>
+              {/* Future-proof: add WebP/AVIF sources if available */}
+              {/* <source srcSet="/profile.avif" type="image/avif" /> */}
+              {/* <source srcSet="/profile.webp" type="image/webp" /> */}
+              <img
+                src="/profile.jpg"
+                srcSet="/profile.jpg 1x, /profile.jpg 2x, /profile.jpg 3x"
+                alt="Omollo Victor"
+                className="object-cover w-full h-full rounded-full"
+                loading="eager"
+                decoding="async"
+                style={{ imageRendering: 'auto' }}
+              />
+            </picture>
+          </div>
+          
+          {/* AI Button on profile picture */}
+          {onAIClick && (
+            <button
+              onClick={onAIClick}
+              className="absolute bottom-0 right-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-110 flex items-center justify-center group"
+              title="Ask AI Assistant"
+            >
+              <Sparkles className="w-5 h-5 sm:w-6 sm:h-6 text-primary-foreground" />
+            </button>
+          )}
         </div>
         <div className="mt-2 sm:mt-4">
           <h1 className="text-2xl sm:text-2xl font-bold text-foreground">Omollo Victor</h1>

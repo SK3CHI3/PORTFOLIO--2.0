@@ -97,22 +97,24 @@ const AIChat = ({ onClose, isMobile = false }: AIChatProps) => {
         </div>
       </div>
 
-      {/* Preset Questions */}
-      <div className="p-4 border-b border-border/30 bg-secondary/20">
-        <p className="text-xs font-medium text-muted-foreground mb-2">Quick questions:</p>
-        <div className="flex flex-wrap gap-2">
-          {PRESET_QUESTIONS.map((question, index) => (
-            <button
-              key={index}
-              onClick={() => handlePresetClick(question)}
-              disabled={isLoading}
-              className="px-3 py-1.5 text-xs font-medium bg-primary/10 hover:bg-primary/20 text-primary rounded-full transition-all duration-200 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed border border-primary/20"
-            >
-              {question}
-            </button>
-          ))}
+      {/* Preset Questions - Hide after user starts chatting */}
+      {messages.length === 1 && (
+        <div className="p-4 border-b border-border/30 bg-secondary/20">
+          <p className="text-xs font-medium text-muted-foreground mb-2">Quick questions:</p>
+          <div className="flex flex-wrap gap-2">
+            {PRESET_QUESTIONS.map((question, index) => (
+              <button
+                key={index}
+                onClick={() => handlePresetClick(question)}
+                disabled={isLoading}
+                className="px-3 py-1.5 text-xs font-medium bg-primary/10 hover:bg-primary/20 text-primary rounded-full transition-all duration-200 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed border border-primary/20"
+              >
+                {question}
+              </button>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
 
       {/* Messages */}
       <ScrollArea className="flex-1 p-4">
@@ -245,22 +247,24 @@ const AIChat = ({ onClose, isMobile = false }: AIChatProps) => {
           </div>
         </div>
 
-        {/* Preset Questions */}
-        <div className="mb-4 pb-4 border-b border-border/30">
-          <p className="text-xs font-medium text-muted-foreground mb-2">Quick questions:</p>
-          <div className="flex flex-wrap gap-2">
-            {PRESET_QUESTIONS.map((question, index) => (
-              <button
-                key={index}
-                onClick={() => handlePresetClick(question)}
-                disabled={isLoading}
-                className="px-3 py-1.5 text-xs font-medium bg-primary/10 hover:bg-primary/20 text-primary rounded-full transition-all duration-200 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed border border-primary/20"
-              >
-                {question}
-              </button>
-            ))}
+        {/* Preset Questions - Hide after user starts chatting */}
+        {messages.length === 1 && (
+          <div className="mb-4 pb-4 border-b border-border/30">
+            <p className="text-xs font-medium text-muted-foreground mb-2">Quick questions:</p>
+            <div className="flex flex-wrap gap-2">
+              {PRESET_QUESTIONS.map((question, index) => (
+                <button
+                  key={index}
+                  onClick={() => handlePresetClick(question)}
+                  disabled={isLoading}
+                  className="px-3 py-1.5 text-xs font-medium bg-primary/10 hover:bg-primary/20 text-primary rounded-full transition-all duration-200 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed border border-primary/20"
+                >
+                  {question}
+                </button>
+              ))}
+            </div>
           </div>
-        </div>
+        )}
 
         {/* Messages */}
         <div className="flex-1 overflow-y-auto scrollbar-hide pr-2">
