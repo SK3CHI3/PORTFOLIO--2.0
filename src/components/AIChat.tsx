@@ -145,8 +145,8 @@ const AIChat = ({ onClose, isMobile = false }: AIChatProps) => {
       )}
 
       {/* Messages */}
-      <div className="flex-1 p-4 overflow-y-auto">
-        <div ref={scrollRef} className="space-y-4">
+      <div ref={scrollRef} className="flex-1 p-4 overflow-y-auto">
+        <div className="space-y-4">
           {messages.map((message) => (
             <div
               key={message.id}
@@ -328,8 +328,8 @@ const AIChat = ({ onClose, isMobile = false }: AIChatProps) => {
         )}
 
         {/* Messages */}
-        <div className="flex-1 overflow-y-auto scrollbar-hide pr-2">
-          <div ref={scrollRef} className="space-y-4">
+        <div ref={scrollRef} className="flex-1 overflow-y-auto scrollbar-hide pr-2">
+          <div className="space-y-4">
             {messages.map((message) => (
               <div
                 key={message.id}
