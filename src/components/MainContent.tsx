@@ -76,25 +76,25 @@ const MainContent: React.FC<MainContentProps> = ({ onAIClick }) => {
       `}</style>
       <div className="w-full h-full flex sm:hidden">
         <div className="w-full h-screen overflow-y-auto snap-y snap-mandatory flex flex-col scrollbar-hide">
-          <div className="snap-start h-screen flex-shrink-0 fade-in-card px-4 flex items-center justify-center">
+          <div className="snap-start h-screen flex-shrink-0 fade-in-card px-4 flex items-start justify-center pt-16">
             <div className="w-full max-w-xl"><ProfileCard onAIClick={onAIClick} /></div>
           </div>
-          <div className="snap-start h-screen flex-shrink-0 fade-in-card px-4 flex items-center justify-center">
+          <div className="snap-start h-screen flex-shrink-0 fade-in-card px-4 flex items-start justify-center pt-16">
             <div className="w-full max-w-xl"><AboutCard /></div>
           </div>
-          <div className="snap-start h-screen flex-shrink-0 fade-in-card px-4 flex items-center justify-center">
+          <div className="snap-start h-screen flex-shrink-0 fade-in-card px-4 flex items-start justify-center pt-16">
             <div className="w-full max-w-xl"><EducationCard /></div>
           </div>
-          <div className="snap-start h-screen flex-shrink-0 fade-in-card px-4 flex items-center justify-center">
+          <div className="snap-start h-screen flex-shrink-0 fade-in-card px-4 flex items-start justify-center pt-16">
             <div className="w-full max-w-xl"><WhereIveWorked /></div>
           </div>
-          <div className="snap-start h-screen flex-shrink-0 fade-in-card px-4 flex items-center justify-center">
+          <div className="snap-start h-screen flex-shrink-0 fade-in-card px-4 flex items-start justify-center pt-16">
             <div className="w-full max-w-xl"><ProjectsCard /></div>
           </div>
-          <div className="snap-start h-screen flex-shrink-0 fade-in-card px-4 flex items-center justify-center">
+          <div className="snap-start h-screen flex-shrink-0 fade-in-card px-4 flex items-start justify-center pt-16">
             <div className="w-full max-w-xl"><Skills /></div>
           </div>
-          <div className="snap-start h-screen flex-shrink-0 fade-in-card px-4 flex items-center justify-center">
+          <div className="snap-start h-screen flex-shrink-0 fade-in-card px-4 flex items-start justify-center pt-16">
             <div className="w-full max-w-xl"><Contact /></div>
           </div>
         </div>

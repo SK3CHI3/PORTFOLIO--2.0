@@ -5,6 +5,7 @@ import { Input } from "./ui/input";
 import { ScrollArea } from "./ui/scroll-area";
 import { useAIChat } from "@/hooks/useAIChat";
 import { cn } from "@/lib/utils";
+import ReactMarkdown from "react-markdown";
 
 interface AIChatProps {
   onClose: () => void;
@@ -26,10 +27,13 @@ const AIChat = ({ onClose, isMobile = false }: AIChatProps) => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  // Auto scroll to bottom when messages change
+  // Smooth auto scroll to bottom when messages change
   useEffect(() => {
     if (scrollRef.current) {
-      scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
+      scrollRef.current.scrollTo({
+        top: scrollRef.current.scrollHeight,
+        behavior: 'smooth'
+      });
     }
   }, [messages, streamingMessage]);
 
@@ -51,11 +55,13 @@ const AIChat = ({ onClose, isMobile = false }: AIChatProps) => {
     }
   };
 
-  const handleKeyPress = (e: React.KeyboardEvent) => {
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    // Send on Enter (without Shift)
     if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
       handleSend();
     }
+    // Allow Shift+Enter for new line (default behavior)
   };
 
   // Mobile: full screen overlay
@@ -117,7 +123,7 @@ const AIChat = ({ onClose, isMobile = false }: AIChatProps) => {
       )}
 
       {/* Messages */}
-      <ScrollArea className="flex-1 p-4">
+      <div className="flex-1 p-4 overflow-y-auto">
         <div ref={scrollRef} className="space-y-4">
           {messages.map((message) => (
             <div
@@ -140,7 +146,24 @@ const AIChat = ({ onClose, isMobile = false }: AIChatProps) => {
                     : "bg-secondary/50 text-foreground rounded-bl-sm border border-border/50"
                 )}
               >
-                {message.content}
+                {message.role === "assistant" ? (
+                  <div className="prose prose-sm dark:prose-invert max-w-none [&>*]:mb-2 [&>*:last-child]:mb-0">
+                    <ReactMarkdown
+                      components={{
+                        p: ({ children }) => <p className="mb-2 last:mb-0">{children}</p>,
+                        ul: ({ children }) => <ul className="list-disc list-inside mb-2">{children}</ul>,
+                        ol: ({ children }) => <ol className="list-decimal list-inside mb-2">{children}</ol>,
+                        li: ({ children }) => <li className="mb-1">{children}</li>,
+                        code: ({ children }) => <code className="bg-muted px-1.5 py-0.5 rounded text-xs">{children}</code>,
+                        strong: ({ children }) => <strong className="font-semibold text-primary">{children}</strong>,
+                      }}
+                    >
+                      {message.content}
+                    </ReactMarkdown>
+                  </div>
+                ) : (
+                  message.content
+                )}
               </div>
               {message.role === "user" && (
                 <div className="w-8 h-8 rounded-full bg-gradient-to-br from-secondary to-secondary/70 flex items-center justify-center flex-shrink-0">
@@ -156,10 +179,23 @@ const AIChat = ({ onClose, isMobile = false }: AIChatProps) => {
               <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center flex-shrink-0">
                 <Sparkles className="w-4 h-4 text-primary-foreground" />
               </div>
-              <div className="max-w-[80%] rounded-2xl rounded-bl-sm px-4 py-2.5 text-sm leading-relaxed bg-secondary/50 text-foreground border border-border/50">
-                {streamingMessage}
-                <span className="inline-block w-1 h-4 ml-1 bg-primary animate-pulse" />
-              </div>
+                <div className="max-w-[80%] rounded-2xl rounded-bl-sm px-4 py-2.5 text-sm leading-relaxed bg-secondary/50 text-foreground border border-border/50">
+                  <div className="prose prose-sm dark:prose-invert max-w-none inline-block">
+                    <ReactMarkdown
+                      components={{
+                        p: ({ children }) => <span className="inline">{children}</span>,
+                        ul: ({ children }) => <ul className="list-disc list-inside mb-2">{children}</ul>,
+                        ol: ({ children }) => <ol className="list-decimal list-inside mb-2">{children}</ol>,
+                        li: ({ children }) => <li className="mb-1">{children}</li>,
+                        code: ({ children }) => <code className="bg-muted px-1.5 py-0.5 rounded text-xs">{children}</code>,
+                        strong: ({ children }) => <strong className="font-semibold text-primary">{children}</strong>,
+                      }}
+                    >
+                      {streamingMessage}
+                    </ReactMarkdown>
+                    <span className="inline-block w-1 h-4 ml-1 bg-primary animate-pulse align-middle" />
+                  </div>
+                </div>
             </div>
           )}
 
@@ -179,24 +215,30 @@ const AIChat = ({ onClose, isMobile = false }: AIChatProps) => {
             </div>
           )}
         </div>
-      </ScrollArea>
+      </div>
 
       {/* Input */}
-      <div className="p-4 border-t border-border/50 bg-secondary/10">
-        <div className="flex gap-2">
+      <div className="p-4">
+        <div className="flex gap-2 items-center bg-background/50 rounded-full border border-border/50 px-4 py-2 focus-within:ring-2 focus-within:ring-primary/20 transition-all">
           <Input
             ref={inputRef}
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            onKeyPress={handleKeyPress}
-            placeholder="Ask me anything about Victor..."
+            onKeyDown={handleKeyDown}
+            placeholder="Ask me anything..."
             disabled={isLoading}
-            className="flex-1 bg-background/50 border-border/50 focus-visible:ring-primary"
+            className="flex-1 bg-transparent border-0 focus-visible:ring-0 text-base px-0"
+            autoComplete="off"
+            autoCorrect="off"
+            autoCapitalize="sentences"
+            enterKeyHint="send"
+            aria-label="Chat message input"
           />
           <Button
             onClick={handleSend}
             disabled={!input.trim() || isLoading}
-            className="bg-primary hover:bg-primary/90 px-4"
+            size="icon"
+            className="bg-primary hover:bg-primary/90 rounded-full h-8 w-8 shrink-0"
           >
             {isLoading ? (
               <Loader2 className="w-4 h-4 animate-spin" />
@@ -205,9 +247,6 @@ const AIChat = ({ onClose, isMobile = false }: AIChatProps) => {
             )}
           </Button>
         </div>
-        <p className="text-xs text-muted-foreground mt-2 text-center">
-          AI responses may not always be accurate. For important info, contact Victor directly.
-        </p>
       </div>
     </div>
     );
@@ -290,7 +329,24 @@ const AIChat = ({ onClose, isMobile = false }: AIChatProps) => {
                       : "bg-secondary/50 text-foreground rounded-bl-sm border border-border/50"
                   )}
                 >
-                  {message.content}
+                  {message.role === "assistant" ? (
+                    <div className="prose prose-sm dark:prose-invert max-w-none [&>*]:mb-2 [&>*:last-child]:mb-0">
+                      <ReactMarkdown
+                        components={{
+                          p: ({ children }) => <p className="mb-2 last:mb-0">{children}</p>,
+                          ul: ({ children }) => <ul className="list-disc list-inside mb-2">{children}</ul>,
+                          ol: ({ children }) => <ol className="list-decimal list-inside mb-2">{children}</ol>,
+                          li: ({ children }) => <li className="mb-1">{children}</li>,
+                          code: ({ children }) => <code className="bg-muted px-1.5 py-0.5 rounded text-xs">{children}</code>,
+                          strong: ({ children }) => <strong className="font-semibold text-primary">{children}</strong>,
+                        }}
+                      >
+                        {message.content}
+                      </ReactMarkdown>
+                    </div>
+                  ) : (
+                    message.content
+                  )}
                 </div>
                 {message.role === "user" && (
                   <div className="w-8 h-8 rounded-full bg-gradient-to-br from-secondary to-secondary/70 flex items-center justify-center flex-shrink-0">
@@ -307,8 +363,21 @@ const AIChat = ({ onClose, isMobile = false }: AIChatProps) => {
                   <Sparkles className="w-4 h-4 text-primary-foreground" />
                 </div>
                 <div className="max-w-[80%] rounded-2xl rounded-bl-sm px-4 py-2.5 text-sm leading-relaxed bg-secondary/50 text-foreground border border-border/50">
-                  {streamingMessage}
-                  <span className="inline-block w-1 h-4 ml-1 bg-primary animate-pulse" />
+                  <div className="prose prose-sm dark:prose-invert max-w-none inline-block">
+                    <ReactMarkdown
+                      components={{
+                        p: ({ children }) => <span className="inline">{children}</span>,
+                        ul: ({ children }) => <ul className="list-disc list-inside mb-2">{children}</ul>,
+                        ol: ({ children }) => <ol className="list-decimal list-inside mb-2">{children}</ol>,
+                        li: ({ children }) => <li className="mb-1">{children}</li>,
+                        code: ({ children }) => <code className="bg-muted px-1.5 py-0.5 rounded text-xs">{children}</code>,
+                        strong: ({ children }) => <strong className="font-semibold text-primary">{children}</strong>,
+                      }}
+                    >
+                      {streamingMessage}
+                    </ReactMarkdown>
+                    <span className="inline-block w-1 h-4 ml-1 bg-primary animate-pulse align-middle" />
+                  </div>
                 </div>
               </div>
             )}
@@ -332,21 +401,27 @@ const AIChat = ({ onClose, isMobile = false }: AIChatProps) => {
         </div>
 
         {/* Input */}
-        <div className="mt-4 pt-4 border-t border-border/50">
-          <div className="flex gap-2">
+        <div className="mt-4 pt-4">
+          <div className="flex gap-2 items-center bg-background/50 rounded-full border border-border/50 px-4 py-2 focus-within:ring-2 focus-within:ring-primary/20 transition-all">
             <Input
               ref={inputRef}
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              onKeyPress={handleKeyPress}
-              placeholder="Ask me anything about Victor..."
+              onKeyDown={handleKeyDown}
+              placeholder="Ask me anything..."
               disabled={isLoading}
-              className="flex-1 bg-background/50 border-border/50 focus-visible:ring-primary"
+              className="flex-1 bg-transparent border-0 focus-visible:ring-0 text-base px-0"
+              autoComplete="off"
+              autoCorrect="off"
+              autoCapitalize="sentences"
+              enterKeyHint="send"
+              aria-label="Chat message input"
             />
             <Button
               onClick={handleSend}
               disabled={!input.trim() || isLoading}
-              className="bg-primary hover:bg-primary/90 px-4"
+              size="icon"
+              className="bg-primary hover:bg-primary/90 rounded-full h-8 w-8 shrink-0"
             >
               {isLoading ? (
                 <Loader2 className="w-4 h-4 animate-spin" />
@@ -355,9 +430,6 @@ const AIChat = ({ onClose, isMobile = false }: AIChatProps) => {
               )}
             </Button>
           </div>
-          <p className="text-xs text-muted-foreground mt-2 text-center">
-            AI responses may not always be accurate. For important info, contact Victor directly.
-          </p>
         </div>
 
         {/* Hide scrollbar */}
