@@ -47,7 +47,7 @@ const ProfileCard = ({ onAIClick }: ProfileCardProps) => {
           {onAIClick && (
             <button
               onClick={onAIClick}
-              className="absolute -bottom-2 -right-4 sm:-right-6 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-primary/10 hover:bg-primary/20 border border-primary/30 shadow-md hover:shadow-lg transition-all duration-200 hover:scale-105 flex items-center gap-1.5 sm:gap-2 group"
+              className="absolute -bottom-2 -right-8 sm:-right-10 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-primary/10 hover:bg-primary/20 border border-primary/30 shadow-md hover:shadow-lg transition-all duration-200 hover:scale-105 flex items-center gap-1.5 sm:gap-2 group"
               title="Ask AI Assistant"
             >
               <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
