@@ -7,10 +7,10 @@ Your AI chat now works with regular `npm run dev`! No complex dev servers needed
 
 ## 🚀 Quick Start
 
-### 1. Your API Key is Already Set!
-Check your `.env` file:
+### 1. Set Your API Key
+Create a `.env` file in your project root:
 ```env
-VITE_DEEPSEEK_API_KEY=sk-714c82ef0a854ae7913854352e653a50
+VITE_DEEPSEEK_API_KEY=your_deepseek_api_key_here
 ```
 
 ### 2. Start Development Server:
