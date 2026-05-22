@@ -58,7 +58,7 @@ const ProfileCard = ({ onAIClick }: ProfileCardProps) => {
         <div className="mt-2 sm:mt-4">
           <h1 className="text-2xl sm:text-2xl font-bold text-foreground">Omollo Victor</h1>
           <p className="text-sm sm:text-base text-primary font-medium mt-1">
-            Full-Stack Software Engineer & Founder | AWS Certified Cloud Practitioner 
+            Full-Stack Software Engineer & Founder
           </p>
           <p className="text-xs sm:text-sm text-muted-foreground mt-1">he/him</p>
         </div>
