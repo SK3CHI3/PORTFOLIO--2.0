@@ -2,6 +2,14 @@ import ProjectCard from "./ProjectCard";
 
 const projects = [
   {
+    name: "CareerGuide AI",
+    description:
+      "An AI-powered career counseling and guidance platform designed to help students and professionals navigate their career paths with personalized, data-driven insights.",
+    language: "TypeScript",
+    url: "https://github.com/SK3CHI3",
+    liveUrl: "http://careerguideai.co.ke/",
+  },
+  {
     name: "StaffPulse",
     description:
       "An AI-powered HR tool built on WhatsApp that tracks employee mood, detects burnout, and boosts workplace culture through weekly check-ins and real-time sentiment dashboards.",

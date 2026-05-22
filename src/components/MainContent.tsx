@@ -22,7 +22,7 @@ const AboutCard = () => (
       <div className="w-full flex-1 pr-2 overflow-y-auto scrollbar-hide flex items-center">
         <div className="space-y-6 text-center w-full">
           <p className="text-base leading-relaxed text-foreground">
-            I'm Omollo Victor — <span className="text-primary font-bold">Full Stack Engineer</span> & <span className="text-primary font-bold">AWS Cloud Practitioner</span>. I build secure, scalable systems that solve real-world problems and drive real impact.
+            I'm Omollo Victor — <span className="text-primary font-bold">Full Stack Engineer</span>, <span className="text-primary font-bold">AWS Cloud Practitioner</span>, & <span className="text-primary font-bold">Founder of CareerGuide AI</span>. I build secure, scalable systems that solve real-world problems and drive real impact.
           </p>
           <div className="bg-gradient-to-r from-primary/10 via-secondary/10 to-primary/10 rounded-xl p-4 border border-primary/20">
             <div className="flex items-center justify-center space-x-2 mb-3">

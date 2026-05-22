@@ -58,13 +58,21 @@ const ProfileCard = ({ onAIClick }: ProfileCardProps) => {
         <div className="mt-2 sm:mt-4">
           <h1 className="text-2xl sm:text-2xl font-bold text-foreground">Omollo Victor</h1>
           <p className="text-sm sm:text-base text-primary font-medium mt-1">
-            Full-Stack Software Engineer | AWS Certified Cloud Practitioner 
+            Full-Stack Software Engineer & Founder | AWS Certified Cloud Practitioner 
           </p>
           <p className="text-xs sm:text-sm text-muted-foreground mt-1">he/him</p>
         </div>
       </div>
 
       <div className="flex flex-wrap justify-center gap-2 sm:gap-4 max-w-md">
+        <div className="flex items-center space-x-2 p-2 rounded-lg bg-secondary/30 hover:bg-secondary/50 transition-all duration-200 text-xs sm:text-sm">
+          <Briefcase className="w-4 h-4 text-primary" />
+          <div>
+            <span className="font-medium">Founder at </span>
+            <a href="http://careerguideai.co.ke/" target="_blank" rel="noopener noreferrer" className="font-bold text-primary">CareerGuide AI</a>
+          </div>
+        </div>
+
         <div className="flex items-center space-x-2 p-2 rounded-lg bg-secondary/30 hover:bg-secondary/50 transition-all duration-200 text-xs sm:text-sm">
           <Briefcase className="w-4 h-4 text-primary" />
           <div>

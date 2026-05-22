@@ -5,6 +5,13 @@ import { useNavigate } from "react-router-dom";
 
 const projects = [
   {
+    name: "CareerGuide AI",
+    description: "An AI-powered career counseling and guidance platform designed to help students and professionals navigate their career paths with personalized, data-driven insights.",
+    language: "TypeScript",
+    url: "https://github.com/SK3CHI3",
+    liveUrl: "http://careerguideai.co.ke/"
+  },
+  {
     name: "MY-PORTFOLIO-1.0",
     description: "My Portfolio—A sleek, responsive portfolio built with Vanilla JS, CSS & HTML. Showcases my skills, projects, and journey in tech. ⚡ Fast, mobile-friendly, and easy to update — built to impress and …",
     language: "CSS",
