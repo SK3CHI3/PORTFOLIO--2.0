@@ -72,14 +72,6 @@ const ProfileCard = ({ onAIClick }: ProfileCardProps) => {
             <a href="http://careerguideai.co.ke/" target="_blank" rel="noopener noreferrer" className="font-bold text-primary">CareerGuide AI</a>
           </div>
         </div>
-
-        <div className="flex items-center space-x-2 p-2 rounded-lg bg-secondary/30 hover:bg-secondary/50 transition-all duration-200 text-xs sm:text-sm">
-          <Briefcase className="w-4 h-4 text-primary" />
-          <div>
-            <span className="font-medium">Founder at </span>
-            <a href="https://brandyshop.netlify.app/" target="_blank" rel="noopener noreferrer" className="font-bold text-primary">Brandy</a>
-          </div>
-        </div>
         
         <div className="flex items-center space-x-2 p-2 rounded-lg bg-secondary/30 hover:bg-secondary/50 transition-all duration-200 text-xs sm:text-sm">
           <MapPin className="w-4 h-4 text-primary" />
