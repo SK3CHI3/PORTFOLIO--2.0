@@ -1,0 +1,32 @@
+# Omollo Victor
+
+> Full-Stack Software Engineer, Automation Engineer at CustomCX & Founder of CareerGuide AI. Specializing in secure, scalable web applications, AI automation, React, TypeScript, Node.js, and cloud-native solutions. Based in Nairobi, Kenya.
+
+## Profile Summary
+Omollo Victor is a Full-Stack Engineer, AI Automation Engineer, and EdTech startup founder. He builds AI-powered systems, WhatsApp bots, automation workflows, and robust web applications designed to solve real-world problems.
+- **Role**: Automation Engineer at CustomCX | Founder of CareerGuide AI | Full-Stack Engineer
+- **Location**: Nairobi, Kenya
+- **Email**: omollovictorotieno58@gmail.com
+- **GitHub**: https://github.com/SK3CHI3
+- **LinkedIn**: https://linkedin.com/in/omollo-victor
+- **Website**: https://omollo-victor.is-a.dev/
+
+## AI Context and Documents
+- [Full Portfolio Content](/llms-full.txt): Complete structured markdown containing the full experience, skills, projects description, and contact info in a single ingestion-ready file.
+
+## Current Roles
+- **Automation Engineer** at [CustomCX](https://customcx.com): AI automation agency building WhatsApp bots, voice agents, and website chatbots for Kenyan SMEs.
+- **Founder** at [CareerGuide AI](http://careerguideai.co.ke/): AI-powered career counseling and guidance platform for students and professionals in East Africa.
+
+## Featured Projects
+- [CareerGuide AI](http://careerguideai.co.ke/): An AI-powered career counseling and guidance platform designed to help students and professionals navigate their career paths with personalized, data-driven insights.
+- [StaffPulse](https://staff-pulse.netlify.app/): An AI-powered HR tool integrated with WhatsApp that tracks employee sentiment, detects burnout, and improves workplace culture.
+- [Brandy Shop](https://brandyshop.netlify.app/): A print-on-demand e-commerce platform empowering Kenyan artists to customize and monetize design requests.
+- [Hex AI](https://hexai.website): A specialized cybersecurity AI assistant for ethical hackers and red teamers simulating attacks and payload crafts.
+- [REX Tracker](https://rextracker.online/): A civic tech transparency tracker documenting and reporting incidents of police brutality to promote accountability.
+
+## Technical Skills
+- **Frontend**: React, Next.js, TypeScript, JavaScript, Tailwind CSS
+- **Backend & DB**: Node.js, Express, Python, Supabase, Firebase, PostgreSQL, MongoDB, REST APIs, GraphQL
+- **AI & Automation**: WhatsApp Bot Development, Workflow Automation, n8n, AI Agent Deployment, Chatbot Development
+- **Cloud & DevOps**: AWS, Docker, CI/CD, Git, Netlify, Vercel

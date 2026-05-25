@@ -1,3 +1,4 @@
+# General Crawlers
 User-agent: *
 Allow: /
 
@@ -6,10 +7,7 @@ Allow: /projects
 Allow: /contact
 Allow: /about
 
-# Sitemap location
-Sitemap: https://omollo-victor.is-a.dev/sitemap.xml
-
-# Disallow common sensitive paths (just in case)
+# Disallow common sensitive paths
 Disallow: /api/
 Disallow: /admin/
 Disallow: /_next/
@@ -17,3 +15,42 @@ Disallow: /node_modules/
 
 # Crawl delay for polite crawling
 Crawl-delay: 1
+
+# Explicit permissions and pathways for AI scrapers / LLMs
+User-agent: GPTBot
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: ChatGPT-User
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: ClaudeBot
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: Claude-Web
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: PerplexityBot
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: Google-Extended
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: Applebot-Extended
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+# Sitemap and AI Directory Mappings
+Sitemap: https://omollo-victor.is-a.dev/sitemap.xml

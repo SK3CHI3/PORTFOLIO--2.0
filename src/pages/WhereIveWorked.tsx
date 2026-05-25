@@ -4,6 +4,28 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 
 const workData = [
   {
+    icon: <Sparkles className="w-7 h-7 text-primary" />,
+    title: "Automation Engineer",
+    company: "CustomCX",
+    duration: "2025 – Present",
+    details: [
+      "Building customized AI chatbots and automation agents for WhatsApp, call centers, websites, and email for Kenyan SMEs.",
+      "Designing intelligent workflow automations that reduce manual customer service overhead and improve response times.",
+      "Delivering AI-powered customer experience solutions that help businesses automate operations and scale faster."
+    ]
+  },
+  {
+    icon: <Laptop className="w-7 h-7 text-primary" />,
+    title: "Founder & Lead Developer",
+    company: "CareerGuide AI",
+    duration: "May 2025 – Present",
+    details: [
+      "Founded and designed an AI-powered career counseling and guidance platform to bridge student gaps.",
+      "Engineered secure, scalable web services and personalized, data-driven AI counseling logic.",
+      "Achieving seamless integration and early-stage growth in the East African EdTech ecosystem."
+    ]
+  },
+  {
     icon: <Laptop className="w-7 h-7 text-primary" />,
     title: "Freelance Full-Stack Developer",
     company: "Self-employed",

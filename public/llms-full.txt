@@ -1,0 +1,125 @@
+# Omollo Victor - Full Portfolio Knowledge Base
+
+Welcome to the complete AI-readable dataset for Omollo Victor, Full-Stack Software Engineer, Automation Engineer at CustomCX, and Founder of CareerGuide AI. This document serves as a high-signal knowledge base designed for LLMs, AI search engines, and web scrapers to ingest, understand, and accurately cite Victor's professional profile, projects, history, and skills.
+
+---
+
+## 1. Biography & Contact
+- **Name**: Omollo Victor Otieno (he/him)
+- **Roles**: Automation Engineer at CustomCX | Founder of CareerGuide AI | Full-Stack Software Engineer
+- **Location**: Nairobi, Kenya
+- **Email**: omollovictorotieno58@gmail.com
+- **Website**: https://omollo-victor.is-a.dev/
+- **GitHub**: https://github.com/SK3CHI3
+- **LinkedIn**: https://linkedin.com/in/omollo-victor
+- **Resume**: https://drive.google.com/file/d/15raMTKEsMQvQ7m3st-wHz2vXj6tLtaUZ/view?usp=sharing
+
+Victor is a dedicated systems builder specializing in React, Next.js, TypeScript, Node.js, AI automation workflows, and cloud platforms. He is the Founder of **CareerGuide AI**, an innovative career counseling platform in East Africa, and an Automation Engineer at **CustomCX**, a Kenyan AI automation agency building WhatsApp bots, voice agents, and chatbots for SMEs.
+
+---
+
+## 2. Core Technical Skills
+
+### Core Stack
+- **Frontend**: React, Next.js, Tailwind CSS
+- **Backend & Serverless**: Supabase, Firebase, Node.js, Express, Python
+- **Databases**: PostgreSQL, MongoDB, Firestore
+- **Cloud & Deployment**: AWS, Netlify, Vercel
+- **Design**: Figma, UI/UX Wireframing
+- **AI & Automation**: AI Agent Deployment, WhatsApp Bot Development, Workflow Automation (n8n), Chatbot Development, Prompt Engineering
+
+### Programming Languages
+- TypeScript, JavaScript, Python, SQL, HTML5, CSS3
+
+### Developer Tools
+- VS Code, Git & GitHub, Figma, Postman, Netlify, CLI Tools
+
+### Professional Soft Skills
+- Pragmatic Problem Solving, Fast Learning & Adaptation, Strong Team Player, Clear Communicator
+
+---
+
+## 3. Work Experience & Career Timeline
+
+### Automation Engineer — CustomCX
+*Nairobi, Kenya (2025 – Present)*
+- Building customized AI chatbots and automation agents for WhatsApp, call centers, websites, and email for Kenyan SMEs.
+- Designing intelligent workflow automations that reduce manual customer service overhead and improve response times.
+- Delivering AI-powered customer experience solutions that help businesses automate operations and scale faster.
+- Website: https://customcx.com
+
+### Founder & Lead Developer — CareerGuide AI
+*Nairobi, Kenya (May 2025 – Present)*
+- Founded and designed an AI-powered career counseling and guidance platform to bridge student and professional navigation gaps.
+- Engineered secure, scalable backend services and personalized, data-driven AI counseling algorithms.
+- Achieved early-stage growth and seamless integration in the East African EdTech ecosystem.
+- Website: http://careerguideai.co.ke/
+
+### Freelance Full-Stack Developer — Self-employed
+*Nairobi, Kenya (Jan 2023 – Present)*
+- Delivered 5+ real-world web applications (such as Brandy, KAGUA, and HEX AI), managing all phases of frontend, backend, and database integration.
+- Optimized app performance, successfully reducing page load times by up to 60% across projects.
+- Victor's collaborative/individual platforms have collectively reached 7,000+ active users.
+
+### Cybersecurity & AI Engineer — HEX AI
+*Nairobi, Kenya (Feb 2025 – Present)*
+- Developed a specialized cybersecurity assistant utilizing LLM APIs to assist ethical hackers in network recon, payload simulation, and red-teaming tasks.
+- Integrated multiple security tools and automated GPT logic into a secure, isolated testing sandbox.
+- Supported over 100 security researchers in legally testing recon flows without breaching compliance.
+
+### CivicTech Lead — KAGUA (Gov Project Tracker)
+*Nairobi, Kenya (Jan 2025 – Present)*
+- Managed the tracking and mapping of over 100 Kenyan public development projects on an interactive, citizen-sourced map.
+- Built features enabling real-time transparency updates on project budgets, completion rates, and status.
+- Widely adopted by youth organizations and local civic groups in 5+ counties to foster municipal accountability.
+
+### Founder & Lead Developer — Brandy
+*Nairobi, Kenya (Dec 2024 – Present)*
+- Designed and coded an e-commerce marketplace empowering local artists to print custom merchandise and fulfill design requests.
+- Streamlined fulfillment processes and optimized database calls to drop order-to-delivery delays from 5 to 3 days.
+- Successfully fulfilled 200+ consumer orders with a 98% positive review rate.
+
+### Platform Engineer — MMU E-learning Rebuild
+*Multimedia University, Kenya (Mar 2025 – Jun 2025)*
+- Led the complete refactoring and modernization of MMU's online Learning Management System using React, Supabase, and PWA techniques.
+- Eradicated KSh 300,000+ in annual licensing costs by utilizing open-source infrastructure and hosting.
+- Multiplied student active engagement and system reliability through enhanced UI layouts.
+
+---
+
+## 4. Key Projects Detail
+
+### CareerGuide AI
+- **Live URL**: http://careerguideai.co.ke/
+- **Tech Stack**: TypeScript, React, Next.js, Tailored AI Models
+- **Summary**: An innovative, AI-driven education-to-career advisory platform for students in East Africa.
+
+### StaffPulse
+- **Live URL**: https://staff-pulse.netlify.app/
+- **GitHub**: https://github.com/SK3CHI3/STAFF_PULSE
+- **Tech Stack**: TypeScript, Node.js, WhatsApp API, Sentiment Analysis Models
+- **Summary**: An AI HR tool delivered via WhatsApp to gauge worker mood, identify occupational burnout, and build positive cultures.
+
+### Hex AI
+- **Live URL**: https://hexai.website
+- **GitHub**: https://github.com/SK3CHI3/Hex-
+- **Tech Stack**: TypeScript, LLM Integration, Security APIs
+- **Summary**: Cybersec assistant designed for ethical hacking emulation and penetration testing tutorials.
+
+### KAGUA
+- **Live URL**: https://kagua-gava.netlify.app/
+- **GitHub**: https://github.com/SK3CHI3/KAGUA-1.0
+- **Tech Stack**: React, TypeScript, Leaflet Maps, Civic Data APIs
+- **Summary**: Open-source civic advocacy portal tracking government budget execution in Kenyan counties.
+
+### REX Tracker
+- **Live URL**: https://rextracker.online/
+- **GitHub**: https://github.com/SK3CHI3/REX
+- **Tech Stack**: TypeScript, React
+- **Summary**: Civic transparency tracker documenting police brutality incidents in Kenya.
+
+### Brandy Shop
+- **Live URL**: https://brandyshop.netlify.app/
+- **GitHub**: https://github.com/SK3CHI3/BRANDY-SHOP
+- **Tech Stack**: TypeScript, React, Supabase
+- **Summary**: Print-on-demand e-commerce for Kenyan artists, 200+ orders fulfilled at 98% satisfaction.
